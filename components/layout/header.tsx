@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useTheme } from 'next-themes'
 import { useI18n, type Lang } from '@/lib/i18n'
+import { useAuth } from '@/lib/auth-context'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { ThemeToggle } from '@/components/layout/theme-toggle'
@@ -24,6 +25,7 @@ export function Header() {
   const router = useRouter()
   const { theme, setTheme } = useTheme()
   const { lang, setLang, t } = useI18n()
+  const { user, loading: authLoading, signOut } = useAuth()
 
   const isActive = (href: string) => pathname === href
 
@@ -60,10 +62,23 @@ export function Header() {
           <LangToggle lang={lang} toggle={toggleLang} />
           <ThemeToggle dark={theme === 'dark'} toggle={toggleTheme} />
           <Separator orientation="vertical" className="h-5 mx-1" />
-          <button className="text-sm text-muted-foreground hover:text-foreground transition-colors">{t.nav.login}</button>
-          <Button size="sm" className="h-8 px-4 text-xs tracking-wide" onClick={() => router.push('/chat')}>
-            {t.nav.start}
-          </Button>
+          {!authLoading && user ? (
+            <>
+              <span className="text-sm text-muted-foreground truncate max-w-[120px]">
+                {user.user_metadata?.full_name || user.email?.split('@')[0]}
+              </span>
+              <Button size="sm" variant="ghost" className="h-8 px-3 text-xs" onClick={async () => { await signOut(); router.push('/') }}>
+                {lang === 'ko' ? '로그아웃' : 'Sign out'}
+              </Button>
+            </>
+          ) : (
+            <>
+              <button className="text-sm text-muted-foreground hover:text-foreground transition-colors" onClick={() => router.push('/auth/login')}>{t.nav.login}</button>
+              <Button size="sm" className="h-8 px-4 text-xs tracking-wide" onClick={() => router.push('/chat')}>
+                {t.nav.start}
+              </Button>
+            </>
+          )}
         </div>
 
         {/* Mobile menu button */}
@@ -93,10 +108,23 @@ export function Header() {
               </Link>
             ))}
             <Separator className="my-1" />
-            <button className="text-left py-2 text-sm text-muted-foreground">{t.nav.login}</button>
-            <Button size="sm" className="w-full mt-1" onClick={() => { router.push('/chat'); setMobileOpen(false) }}>
-              {t.nav.start}
-            </Button>
+            {!authLoading && user ? (
+              <>
+                <span className="py-2 text-sm text-muted-foreground truncate">
+                  {user.user_metadata?.full_name || user.email?.split('@')[0]}
+                </span>
+                <Button size="sm" variant="ghost" className="w-full mt-1" onClick={async () => { await signOut(); setMobileOpen(false); router.push('/') }}>
+                  {lang === 'ko' ? '로그아웃' : 'Sign out'}
+                </Button>
+              </>
+            ) : (
+              <>
+                <button className="text-left py-2 text-sm text-muted-foreground" onClick={() => { router.push('/auth/login'); setMobileOpen(false) }}>{t.nav.login}</button>
+                <Button size="sm" className="w-full mt-1" onClick={() => { router.push('/chat'); setMobileOpen(false) }}>
+                  {t.nav.start}
+                </Button>
+              </>
+            )}
           </div>
         </div>
       )}
