@@ -10,9 +10,20 @@ export async function GET(request: Request) {
     const supabase = await createClient()
     const { error } = await supabase.auth.exchangeCodeForSession(code)
     if (!error) {
-      return NextResponse.redirect(`${origin}${next}`)
+      const forwardedHost = request.headers.get('x-forwarded-host')
+      const isLocal = process.env.NODE_ENV === 'development'
+      if (isLocal) {
+        return NextResponse.redirect(`${origin}${next}`)
+      } else if (forwardedHost) {
+        return NextResponse.redirect(`https://${forwardedHost}${next}`)
+      } else {
+        return NextResponse.redirect(`${origin}${next}`)
+      }
     }
+    console.error('Auth callback error:', error.message, error)
+    return NextResponse.redirect(`${origin}/auth/login?error=${encodeURIComponent(error.message)}`)
   }
 
-  return NextResponse.redirect(`${origin}/auth/login?error=auth_callback_error`)
+  console.error('Auth callback: no code in URL params')
+  return NextResponse.redirect(`${origin}/auth/login?error=no_code`)
 }

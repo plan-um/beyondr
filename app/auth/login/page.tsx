@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { useI18n } from '@/lib/i18n'
@@ -41,6 +41,12 @@ export default function LoginPage() {
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const urlError = params.get('error')
+    if (urlError) setError(decodeURIComponent(urlError))
+  }, [])
 
   const handleGoogleSignIn = async () => {
     const supabase = createClient()
