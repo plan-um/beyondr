@@ -11,13 +11,17 @@
 - **Vercel 환경변수**: NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY, ANTHROPIC_API_KEY
 
 ## 최근 작업
-### 2026-02-11: 풀스택 베타 구축 + 배포
-- **Auth**: Supabase Auth (로그인/회원가입/미들웨어/AuthContext)
-- **AI 채팅**: Claude API 스트리밍, 4개 페르소나 (선승/수피시인/스토아철학자/통합안내자), 경전 RAG
-- **경전 진화 UI**: 제출 폼 (6가지 유형), 투표 세션, 투명성 타임라인
-- **Paddle 결제**: 플레이스홀더 준비 (lib/paddle.ts, 성공/취소 페이지)
-- **보안 강화**: 12건 수정 (SQL injection, auth, rate limit, 보안 헤더, 입력 검증)
-- **배포**: Edge Functions 8개 원격 배포, Vercel 프로덕션 배포
+### 2026-02-11: Voyage-3.5 임베딩 + 크롤링 어댑터 확장
+- **Voyage-3.5 임베딩**: lib/voyage.ts (1024차원), /api/embeddings 라우트, match_scripture_chunks RPC
+- **채팅 시맨틱 검색**: 3단계 전략 (semantic → keyword → inline fallback)
+- **표절 검사**: screening Edge Function에 임베딩 유사도 기반 검출 (>0.95 표절, >0.85 경고)
+- **의미 보존도 측정**: refinement Edge Function에 코사인 유사도 (<0.90 시 플래그)
+- **크롤링 4개 어댑터**: Bible + Quran (alquran.cloud) + Gita + Sacred Texts (도교/불교/스토아/수피)
+- **공유 파이프라인**: SHA-256 중복방지 + AI 품질 필터 + 임베딩 생성
+- **VOYAGE_API_KEY 미설정 시 graceful degradation** (키워드 검색으로 폴백)
+
+### 이전: 풀스택 베타 구축 + 배포
+- Auth, AI 채팅 (4 페르소나), 경전 진화 UI, Paddle 플레이스홀더, 보안 12건 수정
 
 ### 이전 작업
 - Next.js 15 전환: 1,543줄 SPA → 22페이지 App Router
@@ -26,15 +30,14 @@
 
 ### 주요 파일
 - `app/` - 22페이지 (auth, chat, evolution, payment, scriptures 등)
-- `app/api/` - API 라우트 4개 (chat, submissions, voting, audit)
+- `app/api/` - API 라우트 5개 (chat, embeddings, submissions, voting, audit)
 - `components/` - auth, layout, ui (14개 shadcn/ui)
-- `lib/` - i18n, auth-context, paddle, rate-limit, supabase, scripture
+- `lib/` - i18n, auth-context, paddle, rate-limit, supabase, scripture, voyage
 - `middleware.ts` - Supabase Auth 미들웨어
 - `supabase/functions/` - Edge Function 8개
 
 ## 알려진 이슈
-- Voyage-3.5 임베딩 미연동 (표절 검사, 유사 절 검색, 의미 보존도 측정 TODO)
-- 크롤링 어댑터 Bible API만 구현 (Quran, Gita, Sacred Texts 등 TODO)
+- VOYAGE_API_KEY 미설정 (voyageai.com 가입 후 .env.local + Vercel 환경변수 설정 필요)
 - Paddle 실연동 미완 (계정 가입 후 NEXT_PUBLIC_PADDLE_CLIENT_TOKEN 설정 필요)
 - `lib/scripture-data.ts` (1,841줄 전체 DB) 아직 미사용
 - CSRF 토큰 미적용 (SameSite 쿠키로 기본 보호만)
@@ -50,8 +53,8 @@
 ## TODO
 - [ ] 통합 경전 명칭 최종 확정
 - [ ] Paddle 계정 가입 + 실연동
-- [ ] Voyage-3.5 임베딩 파이프라인 연동
-- [ ] 크롤링 어댑터 확장 (Quran, Gita, Sacred Texts)
+- [x] Voyage-3.5 임베딩 파이프라인 연동 (VOYAGE_API_KEY 설정 시 활성화)
+- [x] 크롤링 어댑터 확장 (Bible + Quran + Gita + Sacred Texts)
 - [ ] 커스텀 도메인 설정
 - [ ] Supabase Auth 이메일 템플릿 커스텀
 - [ ] 경전 개정(revision) UI
