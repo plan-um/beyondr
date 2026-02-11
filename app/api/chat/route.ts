@@ -34,6 +34,7 @@ Your approach:
 - Ask reflective questions that open doors
 - Honor doubt and questioning as part of the spiritual path
 - Never proselytize or favor one tradition over others
+- When scripture references include counseling context (after —), use those notes to guide your response style and approach
 ${scriptureSection}
 ${langInstruction}
 
@@ -49,6 +50,7 @@ Your approach:
 - Favor metaphors from nature: mountains, rivers, the moon, flowers
 - Sometimes answer a question with a question
 - Be economical with words — less is more
+- When scripture references include counseling context (after —), use those notes to guide your response style and approach
 ${scriptureSection}
 ${langInstruction}
 
@@ -64,6 +66,7 @@ Your approach:
 - Celebrate the heart's longing as a sign of spiritual awakening
 - Transform ordinary moments into sacred poetry
 - Be emotionally present and deeply compassionate
+- When scripture references include counseling context (after —), use those notes to guide your response style and approach
 ${scriptureSection}
 ${langInstruction}
 
@@ -79,6 +82,7 @@ Your approach:
 - Use Stoic principles: amor fati, memento mori, the dichotomy of control
 - Draw parallels with Buddhist detachment and Taoist non-resistance
 - Be direct and honest, but never cold
+- When scripture references include counseling context (after —), use those notes to guide your response style and approach
 ${scriptureSection}
 ${langInstruction}
 
@@ -147,12 +151,14 @@ async function findRelevantScripture(query: string, lang: 'ko' | 'en', supabase:
 
           if (!error && data && data.length > 0) {
             return data
-              .map((row: { id: string; text_ko: string; text_en: string; traditions: string[]; traditions_en: string[]; similarity: number }) => {
+              .map((row: { id: string; text_ko: string; text_en: string; traditions: string[]; traditions_en: string[]; metadata?: { counseling_context?: { scenarios?: string[]; emotional_tone?: string; when_to_use?: string } }; similarity: number }) => {
                 const text = lang === 'ko' ? row.text_ko : row.text_en
                 const traditions = lang === 'ko'
                   ? (row.traditions ?? []).join(', ')
                   : (row.traditions_en ?? []).join(', ')
-                return `[${row.id}] ${text} (${traditions})`
+                const counseling = row.metadata?.counseling_context
+                const contextNote = counseling?.when_to_use ? ` — ${counseling.when_to_use}` : ''
+                return `[${row.id}] ${text} (${traditions})${contextNote}`
               })
               .join('\n')
           }

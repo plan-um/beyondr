@@ -15,6 +15,7 @@ const publicPaths = [
 
 function isPublicPath(pathname: string): boolean {
   if (pathname === '/') return true
+  if (pathname.startsWith('/api/')) return true
   return publicPaths.some(
     (p) => p !== '/' && (pathname === p || pathname.startsWith(p + '/'))
   )

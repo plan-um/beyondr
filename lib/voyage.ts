@@ -88,36 +88,58 @@ export async function generateEmbeddings(
 
   try {
     const allEmbeddings: number[][] = []
+    const batchSize = Math.min(VOYAGE_BATCH_LIMIT, 50)
 
-    // Process in batches of VOYAGE_BATCH_LIMIT
-    for (let i = 0; i < texts.length; i += VOYAGE_BATCH_LIMIT) {
-      const batch = texts.slice(i, i + VOYAGE_BATCH_LIMIT)
+    // Process in batches with rate limit handling
+    for (let i = 0; i < texts.length; i += batchSize) {
+      const batch = texts.slice(i, i + batchSize)
+      let retries = 0
+      const maxRetries = 5
 
-      const response = await fetch(VOYAGE_API_URL, {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          model: VOYAGE_MODEL,
-          input: batch,
-          input_type: inputType,
-        }),
-      })
+      while (retries < maxRetries) {
+        const response = await fetch(VOYAGE_API_URL, {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${apiKey}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            model: VOYAGE_MODEL,
+            input: batch,
+            input_type: inputType,
+          }),
+        })
 
-      if (!response.ok) {
-        const errBody = await response.text()
-        console.error(`Voyage API batch error ${response.status}: ${errBody}`)
-        return null
+        if (response.status === 429) {
+          retries++
+          const delay = Math.min(30000 * retries, 90000)
+          console.warn(`Voyage rate limited (attempt ${retries}/${maxRetries}), waiting ${delay / 1000}s...`)
+          await new Promise(r => setTimeout(r, delay))
+          continue
+        }
+
+        if (!response.ok) {
+          const errBody = await response.text()
+          console.error(`Voyage API batch error ${response.status}: ${errBody}`)
+          return null
+        }
+
+        const data: VoyageEmbeddingResponse = await response.json()
+        const sorted = [...data.data].sort((a, b) => a.index - b.index)
+        for (const item of sorted) {
+          allEmbeddings.push(item.embedding)
+        }
+
+        // Rate limit: wait 22s between batches to respect 3 RPM
+        if (i + batchSize < texts.length) {
+          await new Promise(r => setTimeout(r, 22000))
+        }
+        break
       }
 
-      const data: VoyageEmbeddingResponse = await response.json()
-
-      // Sort by index to ensure correct ordering
-      const sorted = [...data.data].sort((a, b) => a.index - b.index)
-      for (const item of sorted) {
-        allEmbeddings.push(item.embedding)
+      if (retries >= maxRetries) {
+        console.error(`Voyage API: max retries exceeded at batch ${Math.floor(i / batchSize)}`)
+        return null
       }
     }
 

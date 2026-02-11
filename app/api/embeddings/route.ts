@@ -22,15 +22,22 @@ function getServiceClient() {
 
 export async function POST(request: Request) {
   try {
-    // Auth check
-    const supabase = await createClient()
-    const {
-      data: { user },
-      error: authError,
-    } = await supabase.auth.getUser()
-
-    if (authError || !user) {
-      return Response.json({ error: 'Unauthorized' }, { status: 401 })
+    // Auth check: support both cookie-based and Bearer token auth
+    let user = null
+    const authHeader = request.headers.get('authorization')
+    if (authHeader?.startsWith('Bearer ')) {
+      const token = authHeader.replace('Bearer ', '')
+      const serviceClient = getServiceClient()
+      const { data, error } = await serviceClient.auth.getUser(token)
+      if (!error) user = data.user
+    }
+    if (!user) {
+      const supabase = await createClient()
+      const { data, error: authError } = await supabase.auth.getUser()
+      if (authError || !data.user) {
+        return Response.json({ error: 'Unauthorized' }, { status: 401 })
+      }
+      user = data.user
     }
 
     // Rate limit: 10 req/min per user
