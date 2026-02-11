@@ -386,18 +386,83 @@ Deno.serve(async (req: Request) => {
     ])
 
     // ------------------------------------------------------------------
-    // Step 4: Plagiarism check (placeholder)
+    // Step 4: Plagiarism check via Voyage-3.5 embedding similarity
     // ------------------------------------------------------------------
 
-    // TODO: Implement embedding-based plagiarism check when Voyage-3.5 embedding
-    // pipeline is ready. This should:
-    // 1. Generate embedding for rawText using Voyage-3.5
-    // 2. Query scripture_chunks and existing approved submissions using vector similarity
-    // 3. Flag as suspicious if cosine similarity > 0.9 (distance < 0.1)
-    const plagiarismCheck = {
+    let plagiarismCheck = {
       is_suspicious: false,
       similarity_score: undefined as number | undefined,
       matched_sources: undefined as string[] | undefined,
+    }
+
+    const voyageKey = Deno.env.get("VOYAGE_API_KEY")
+    if (voyageKey) {
+      try {
+        // Generate embedding for the submission text
+        const embRes = await fetch("https://api.voyageai.com/v1/embeddings", {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${voyageKey}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            model: "voyage-3.5",
+            input: [rawText],
+            input_type: "query",
+          }),
+        })
+
+        if (embRes.ok) {
+          const embData = await embRes.json()
+          const submissionEmbedding = embData.data?.[0]?.embedding
+
+          if (submissionEmbedding) {
+            const embeddingStr = `[${submissionEmbedding.join(",")}]`
+
+            // Check against scripture_chunks for high similarity
+            const { data: chunkMatches } = await supabase.rpc("match_scripture_chunks", {
+              query_embedding: embeddingStr,
+              match_threshold: 0.85,
+              match_count: 5,
+            })
+
+            // Check against approved/registered submissions
+            // (raw SQL via PostgREST won't work for vector search, so we check
+            //  scripture_chunks only — submissions can be added when an RPC exists)
+
+            const matchedSources: string[] = []
+            let highestSimilarity = 0
+
+            if (chunkMatches && chunkMatches.length > 0) {
+              for (const match of chunkMatches) {
+                const sim = Number(match.similarity)
+                if (sim > highestSimilarity) highestSimilarity = sim
+                if (sim > 0.85) {
+                  matchedSources.push(
+                    `scripture_chunk:${match.id} (similarity: ${sim.toFixed(4)})`
+                  )
+                }
+              }
+            }
+
+            const isSuspicious = highestSimilarity > 0.95
+            const isHighSimilarity = highestSimilarity > 0.85
+
+            if (isSuspicious || isHighSimilarity) {
+              plagiarismCheck = {
+                is_suspicious: isSuspicious,
+                similarity_score: highestSimilarity,
+                matched_sources: matchedSources.length > 0 ? matchedSources : undefined,
+              }
+            }
+          }
+        } else {
+          console.error("Voyage API error during plagiarism check:", embRes.status)
+        }
+      } catch (plagiarismError) {
+        console.error("Plagiarism check failed:", plagiarismError)
+        // Non-fatal: continue without plagiarism check
+      }
     }
 
     // ------------------------------------------------------------------

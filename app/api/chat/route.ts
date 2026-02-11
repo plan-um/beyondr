@@ -1,7 +1,9 @@
 import Anthropic from '@anthropic-ai/sdk'
 import { createClient } from '@/lib/supabase/server'
+import { createClient as createServiceClient } from '@supabase/supabase-js'
 import { scriptureVerses } from '@/lib/scripture-verses'
 import { checkRateLimit } from '@/lib/rate-limit'
+import { generateEmbedding } from '@/lib/voyage'
 
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
@@ -125,23 +127,61 @@ function getRandomVerses(lang: 'ko' | 'en', count: number): string {
 }
 
 async function findRelevantScripture(query: string, lang: 'ko' | 'en', supabase: Awaited<ReturnType<typeof createClient>>): Promise<string> {
-  // Sanitize query to prevent PostgREST filter injection
+  // --- Strategy 1: Semantic search via Voyage-3.5 embeddings ---
+  if (process.env.VOYAGE_API_KEY) {
+    try {
+      const queryEmbedding = await generateEmbedding(query.trim().slice(0, 1000), 'query')
+
+      if (queryEmbedding) {
+        const url = process.env.NEXT_PUBLIC_SUPABASE_URL
+        const key = process.env.SUPABASE_SERVICE_ROLE_KEY
+        if (url && key) {
+          const serviceClient = createServiceClient(url, key)
+          const embeddingStr = `[${queryEmbedding.join(',')}]`
+
+          const { data, error } = await serviceClient.rpc('match_scripture_chunks', {
+            query_embedding: embeddingStr,
+            match_threshold: 0.4,
+            match_count: 5,
+          })
+
+          if (!error && data && data.length > 0) {
+            return data
+              .map((row: { id: string; text_ko: string; text_en: string; traditions: string[]; traditions_en: string[]; similarity: number }) => {
+                const text = lang === 'ko' ? row.text_ko : row.text_en
+                const traditions = lang === 'ko'
+                  ? (row.traditions ?? []).join(', ')
+                  : (row.traditions_en ?? []).join(', ')
+                return `[${row.id}] ${text} (${traditions})`
+              })
+              .join('\n')
+          }
+        }
+      }
+    } catch (err) {
+      console.warn('Semantic search failed, falling back to keyword search:', err)
+    }
+  }
+
+  // --- Strategy 2: Keyword ilike search (fallback) ---
   const sanitized = query.replace(/[%_,().]/g, '').trim().slice(0, 100)
 
-  // Try Supabase scripture_chunks table
   if (sanitized) {
     try {
       const { data, error } = await supabase
         .from('scripture_chunks')
-        .select('text_ko, text_en, verse_num, traditions')
+        .select('id, text_ko, text_en, traditions, traditions_en')
         .or(`text_ko.ilike.%${sanitized}%,text_en.ilike.%${sanitized}%`)
         .limit(5)
 
       if (!error && data && data.length > 0) {
         return data
-          .map((row) => {
+          .map((row: { id: string; text_ko: string; text_en: string; traditions: string[]; traditions_en: string[] }) => {
             const text = lang === 'ko' ? row.text_ko : row.text_en
-            return `[${row.verse_num}] ${text} (${row.traditions})`
+            const traditions = lang === 'ko'
+              ? (row.traditions ?? []).join(', ')
+              : (row.traditions_en ?? []).join(', ')
+            return `[${row.id}] ${text} (${traditions})`
           })
           .join('\n')
       }
@@ -150,7 +190,7 @@ async function findRelevantScripture(query: string, lang: 'ko' | 'en', supabase:
     }
   }
 
-  // Fallback: search inline scripture data
+  // --- Strategy 3: Inline scripture data fallback ---
   const inlineResult = searchScripturesInline(query, lang)
   if (inlineResult) return inlineResult
 

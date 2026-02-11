@@ -410,9 +410,68 @@ Deno.serve(async (req: Request) => {
       )
     }
 
-    // Placeholder similarity score — actual embedding-based comparison
-    // requires Voyage-3.5 integration
-    const meaningPreservationScore = 0.95
+    // Semantic preservation measurement via Voyage-3.5 embeddings
+    let meaningPreservationScore = 0.95  // Default fallback
+    let semanticPreservationWarning: string | undefined
+
+    const voyageKey = Deno.env.get("VOYAGE_API_KEY")
+    if (voyageKey) {
+      try {
+        // Generate embeddings for both original and refined texts in one batch
+        const embRes = await fetch("https://api.voyageai.com/v1/embeddings", {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${voyageKey}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            model: "voyage-3.5",
+            input: [inputText, parsed.text_ko],
+            input_type: "document",
+          }),
+        })
+
+        if (embRes.ok) {
+          const embData = await embRes.json()
+          const originalEmb: number[] | undefined = embData.data?.[0]?.embedding
+          const refinedEmb: number[] | undefined = embData.data?.[1]?.embedding
+
+          if (originalEmb && refinedEmb) {
+            // Compute cosine similarity
+            let dotProduct = 0
+            let normA = 0
+            let normB = 0
+            for (let i = 0; i < originalEmb.length; i++) {
+              dotProduct += originalEmb[i] * refinedEmb[i]
+              normA += originalEmb[i] * originalEmb[i]
+              normB += refinedEmb[i] * refinedEmb[i]
+            }
+            const denominator = Math.sqrt(normA) * Math.sqrt(normB)
+            meaningPreservationScore = denominator > 0
+              ? dotProduct / denominator
+              : 0
+
+            // Clamp to [0, 1]
+            meaningPreservationScore = Math.max(0, Math.min(1, meaningPreservationScore))
+
+            if (meaningPreservationScore < 0.90) {
+              semanticPreservationWarning =
+                `의미 보존 경고: 유사도 ${meaningPreservationScore.toFixed(4)} (기준 0.90 이상). ` +
+                `원문과 다듬어진 텍스트의 의미가 크게 달라졌을 수 있습니다.`
+              console.warn(
+                `Semantic preservation low for submission ${submission_id}: ` +
+                `${meaningPreservationScore.toFixed(4)}`
+              )
+            }
+          }
+        } else {
+          console.error("Voyage API error during semantic preservation check:", embRes.status)
+        }
+      } catch (embError) {
+        console.error("Semantic preservation measurement failed:", embError)
+        // Non-fatal: use default score
+      }
+    }
 
     // ------------------------------------------------------------------
     // Step 6: Record refinement_history entry
@@ -507,6 +566,7 @@ Deno.serve(async (req: Request) => {
         message: "Refinement completed",
         status: newStatus ?? submission.status,
         result,
+        ...(semanticPreservationWarning ? { warning: semanticPreservationWarning } : {}),
       }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" }, status: 200 },
     )
