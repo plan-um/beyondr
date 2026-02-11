@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:wght@400;500;600&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+
+@layer base {
+    :root {
+        /* Warm Beige Light Mode — 투명한 따뜻한 톤 */
+        --background: 36 33% 97%;
+        --foreground: 30 10% 15%;
+        --card: 36 30% 95%;
+        --card-foreground: 30 10% 15%;
+        --popover: 36 33% 97%;
+        --popover-foreground: 30 10% 15%;
+        --primary: 30 10% 12%;
+        --primary-foreground: 36 33% 97%;
+        --secondary: 36 20% 92%;
+        --secondary-foreground: 30 10% 20%;
+        --muted: 36 15% 90%;
+        --muted-foreground: 30 8% 46%;
+        --accent: 36 20% 92%;
+        --accent-foreground: 30 10% 15%;
+        --destructive: 0 72% 51%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 36 18% 87%;
+        --input: 36 18% 87%;
+        --ring: 30 10% 12%;
+        --radius: 0.625rem;
+        --gold: 42 60% 50%;
+        --violet: 249 70% 58%;
+    }
+
+    .dark {
+        /* Endel-inspired Deep Void Dark Mode */
+        --background: 240 15% 4%;
+        --foreground: 36 15% 88%;
+        --card: 240 12% 7%;
+        --card-foreground: 36 15% 88%;
+        --popover: 240 12% 7%;
+        --popover-foreground: 36 15% 88%;
+        --primary: 36 15% 88%;
+        --primary-foreground: 240 15% 4%;
+        --secondary: 240 10% 12%;
+        --secondary-foreground: 36 15% 80%;
+        --muted: 240 10% 12%;
+        --muted-foreground: 36 10% 50%;
+        --accent: 240 10% 12%;
+        --accent-foreground: 36 15% 88%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 10% 14%;
+        --input: 240 10% 14%;
+        --ring: 36 15% 80%;
+        --gold: 42 55% 55%;
+        --violet: 249 65% 65%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        @apply bg-background text-foreground antialiased;
+        font-family: 'Pretendard Variable', 'Inter', system-ui, sans-serif;
+        transition: background-color 0.4s ease, color 0.4s ease;
+    }
+}
+
+@layer utilities {
+    .font-serif {
+        font-family: 'Lora', Georgia, serif;
+    }
+    .text-gold {
+        color: hsl(var(--gold));
+    }
+    .text-violet {
+        color: hsl(var(--violet));
+    }
+    .bg-gold {
+        background-color: hsl(var(--gold));
+    }
+    .border-gold {
+        border-color: hsl(var(--gold) / 0.3);
+    }
+    .glow-subtle {
+        box-shadow: 0 0 80px -20px hsl(var(--violet) / 0.15);
+    }
+}
