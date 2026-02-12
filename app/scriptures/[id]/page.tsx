@@ -6,6 +6,8 @@ import Link from 'next/link'
 import { useI18n } from '@/lib/i18n'
 import { scriptureVerses } from '@/lib/scripture-verses'
 import { Separator } from '@/components/ui/separator'
+import { useScriptureSettings } from '@/lib/use-scripture-settings'
+import { FontSizeControl } from '@/components/scripture/font-size-control'
 
 export default function ScriptureDetailPage() {
   const params = useParams()
@@ -14,6 +16,7 @@ export default function ScriptureDetailPage() {
   const chapterIndex = Number(params.id)
   const chapter = scriptureVerses.chapters[chapterIndex]
   const [expandedVerse, setExpandedVerse] = useState<string | null>(null)
+  const { fontSizeClass } = useScriptureSettings()
 
   return (
     <main className="pt-14 min-h-screen">
@@ -29,6 +32,7 @@ export default function ScriptureDetailPage() {
             </svg>
             {s.scriptureDetail.back}
           </Link>
+          <FontSizeControl />
           <div className="flex gap-2 overflow-x-auto">
             {scriptureVerses.chapters.map((ch, i) => (
               <Link
@@ -70,11 +74,8 @@ export default function ScriptureDetailPage() {
               <span className="text-xs tracking-[0.15em] text-gold/60 font-medium mb-3 block">{verse.num}</span>
 
               {/* Verse text */}
-              <p className="text-base leading-relaxed mb-2 font-normal">
+              <p className={`leading-relaxed mb-3 font-serif ${fontSizeClass}`}>
                 {lang === 'ko' ? verse.ko : verse.en}
-              </p>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                {lang === 'ko' ? verse.en : verse.ko}
               </p>
 
               {/* Traditions */}

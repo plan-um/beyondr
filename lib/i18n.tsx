@@ -10,7 +10,7 @@ export interface I18n {
   features: { title: string; f1: { title: string; desc: string }; f2: { title: string; desc: string }; f3: { title: string; desc: string }; f4: { title: string; desc: string } }
   quote: { text: string; attr: string }
   chat: { title: string; placeholder: string; send: string; personas: string[]; greeting: string; sample: string[] }
-  scriptures: { title: string; sub: string; search: string; noResults: string; traditions: string[]; items: { tradition: string; title: string; verses: string; desc: string }[] }
+  scriptures: { title: string; sub: string; search: string; noResults: string; traditions: string[]; items: { tradition: string; title: string; verses: string; desc: string }[]; browse: { allVerses: string; filterByTheme: string; filterByTradition: string; fontSize: string; showAll: string; collapseAll: string; verse: string; allTraditions: string; resultCount: string; readAll: string; searchPlaceholder: string } }
   pricing: { title: string; sub: string; free: { name: string; price: string; period: string; features: string[]; cta: string }; premium: { name: string; price: string; period: string; annual: string; features: string[]; cta: string; badge: string }; launch: string }
   footer: { tagline: string; copy: string; service: string; support: string; terms: string; privacy: string }
   help: {
@@ -86,6 +86,19 @@ const translations: Record<Lang, I18n> = {
         { tradition: 'Life & Death', title: 'Life and Death', verses: '7 verses', desc: 'Every moment is a small birth and a small death. Finding peace with impermanence and meaning in existence.' },
         { tradition: 'Practice', title: 'Stillness and Practice', verses: '8 verses', desc: 'Five minutes of nothing can be the deepest work. Everyday rituals that bring you home to yourself.' },
       ],
+      browse: {
+        allVerses: 'All verses',
+        filterByTheme: 'Theme',
+        filterByTradition: 'Tradition',
+        fontSize: 'Font size',
+        showAll: 'Expand all',
+        collapseAll: 'Collapse all',
+        verse: 'Verse',
+        allTraditions: 'All traditions',
+        resultCount: 'results',
+        readAll: 'Read all scriptures',
+        searchPlaceholder: 'Search verses by keyword...',
+      },
     },
     pricing: {
       title: 'No tricks. Just two plans.',
@@ -203,6 +216,19 @@ const translations: Record<Lang, I18n> = {
         { tradition: '\uC0B6\uACFC \uC8FD\uC74C', title: '\uC0B6\uACFC \uC8FD\uC74C', verses: '7\uC808', desc: '\uB9E4 \uC21C\uAC04\uC740 \uC791\uC740 \uD0C4\uC0DD\uC774\uACE0 \uC791\uC740 \uC8FD\uC74C\uC774\uC5D0\uC694. \uBB34\uC0C1\uD568 \uC18D\uC5D0\uC11C \uD3C9\uD654\uB97C \uCC3E\uACE0, \uC874\uC7AC\uC758 \uC758\uBBF8\uB97C \uBC1C\uACAC\uD574\uC694.' },
         { tradition: '\uC218\uD589', title: '\uACE0\uC694\uC640 \uC218\uD589', verses: '8\uC808', desc: '\uD558\uB8E8 5\uBD84 \uC544\uBB34\uAC83\uB3C4 \uD558\uC9C0 \uC54A\uB294 \uAC83\uC774 \uAC00\uC7A5 \uAE4A\uC740 \uC77C\uC774\uC5D0\uC694. \uB098\uC5D0\uAC8C \uB3CC\uC544\uC624\uB294 \uC77C\uC0C1\uC758 \uC218\uD589.' },
       ],
+      browse: {
+        allVerses: '\uC804\uCCB4 \uAD6C\uC808',
+        filterByTheme: '\uC8FC\uC81C\uBCC4',
+        filterByTradition: '\uC804\uD1B5\uBCC4',
+        fontSize: '\uAE00\uC790 \uD06C\uAE30',
+        showAll: '\uBAA8\uB450 \uD3BC\uCE58\uAE30',
+        collapseAll: '\uBAA8\uB450 \uC811\uAE30',
+        verse: '\uC808',
+        allTraditions: '\uBAA8\uB4E0 \uC804\uD1B5',
+        resultCount: '\uAC1C \uACB0\uACFC',
+        readAll: '\uACBD\uC804 \uC804\uCCB4 \uC77D\uAE30',
+        searchPlaceholder: '\uD0A4\uC6CC\uB4DC\uB85C \uAD6C\uC808 \uAC80\uC0C9...',
+      },
     },
     pricing: {
       title: '\uBCF5\uC7A1\uD55C \uAC70 \uC5C6\uC5B4\uC694',
