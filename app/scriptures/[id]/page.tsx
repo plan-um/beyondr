@@ -74,7 +74,7 @@ export default function ScriptureDetailPage() {
               <span className="text-xs tracking-[0.15em] text-gold/60 font-medium mb-3 block">{verse.num}</span>
 
               {/* Verse text */}
-              <p className={`leading-relaxed mb-3 font-serif ${fontSizeClass}`}>
+              <p className={`leading-relaxed mb-3 ${lang === 'en' ? 'font-serif' : ''} ${fontSizeClass}`}>
                 {lang === 'ko' ? verse.ko : verse.en}
               </p>
 
