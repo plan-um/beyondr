@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useState, type ReactNode } from 'react'
+import { createContext, useContext, useState, useEffect, type ReactNode } from 'react'
 
 export type Lang = 'en' | 'ko'
 
@@ -310,8 +310,40 @@ interface I18nContextValue {
 
 const I18nContext = createContext<I18nContextValue | null>(null)
 
+const LANG_STORAGE_KEY = 'beyondr-preferences'
+
+function getStoredLang(): Lang {
+  if (typeof window === 'undefined') return 'en'
+  try {
+    const raw = localStorage.getItem(LANG_STORAGE_KEY)
+    if (!raw) return 'en'
+    const parsed = JSON.parse(raw)
+    if (parsed.language === 'ko') return 'ko'
+  } catch {
+    // ignore
+  }
+  return 'en'
+}
+
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Lang>('en')
+  const [lang, setLangState] = useState<Lang>('en')
+
+  // Load saved language from localStorage on mount
+  useEffect(() => {
+    setLangState(getStoredLang())
+  }, [])
+
+  const setLang = (newLang: Lang) => {
+    setLangState(newLang)
+    // Save to localStorage for immediate persistence
+    try {
+      const raw = localStorage.getItem(LANG_STORAGE_KEY)
+      const existing = raw ? JSON.parse(raw) : {}
+      localStorage.setItem(LANG_STORAGE_KEY, JSON.stringify({ ...existing, language: newLang }))
+    } catch {
+      // ignore
+    }
+  }
 
   return (
     <I18nContext.Provider value={{ lang, setLang, t: translations[lang] }}>

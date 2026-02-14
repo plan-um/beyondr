@@ -5,6 +5,7 @@ import { useI18n } from '@/lib/i18n'
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import { BackToTop } from '@/components/layout/back-to-top'
+import { PreferencesSync } from '@/components/preferences-sync'
 
 export function LayoutContent({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
@@ -13,6 +14,7 @@ export function LayoutContent({ children }: { children: React.ReactNode }) {
 
   return (
     <>
+      <PreferencesSync />
       <Header />
       {children}
       {!isChatPage && <Footer />}

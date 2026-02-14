@@ -52,18 +52,18 @@ export const chapters: ScriptureChapter[] = [
     title_en: 'The Path of Awakening',
     theme: 'awakening',
     intro_ko:
-      '지금 이 순간, 당신은 이미 깨어 있어요.\n다만 그 사실을 잊고 있을 뿐.',
+      '깨어남은 어딘가에 도착하는 게 아니에요.\n이미 여기 있는 것을, 다시 보는 거예요.',
     intro_en:
-      'Right now, you are already awake.\nYou have simply forgotten.',
+      'Awakening is not arriving somewhere new.\nIt is seeing what has always been here.',
     verses: [
       {
         id: '1:1',
         chapter: 1,
         verse: 1,
         text_ko:
-          '눈을 감으면 어둠이 보이는 게 아니에요.\n보는 자가 보여요.',
+          '눈을 감아보세요. 어둠이 아니라,\n보고 있는 누군가가 느껴질 거예요.\n그게 바로 당신이에요.',
         text_en:
-          'Close your eyes and you do not find darkness.\nYou find the one who sees.',
+          'Close your eyes. It is not darkness you find.\nYou find someone watching — and that someone is you.',
         traditions: ['불교', '베단타'],
         traditions_en: ['Buddhism', 'Vedanta'],
         theme: 'awakening',
@@ -80,18 +80,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Vedanta',
           },
         ],
-        reflection_ko: '눈을 감았을 때, 나는 무엇을 만나고 있나요?',
+        reflection_ko: '눈을 감으면, 거기서 무엇을 만나나요?',
         reflection_en:
-          'When you close your eyes, what do you truly encounter?',
+          'When you close your eyes, who is it that you meet?',
       },
       {
         id: '1:2',
         chapter: 1,
         verse: 2,
         text_ko:
-          '생각을 멈추려 하지 마세요.\n강물을 막으면 넘치듯, 생각은 바라볼 때 고요해져요.',
+          '그 보는 자를 찾았다면, 생각을 멈추려 애쓰지 마세요.\n강물을 막으면 넘치듯이.\n그냥 바라보세요. 생각은 지켜볼 때 스스로 고요해져요.',
         text_en:
-          'Do not try to stop your thoughts.\nAs a dammed river overflows, thoughts grow still only when watched.',
+          'Now that you have found the watcher, do not try to silence your thoughts.\nA dammed river only overflows.\nJust watch. Thoughts grow quiet on their own when you stop fighting them.',
         traditions: ['선불교', '도교'],
         traditions_en: ['Zen', 'Taoism'],
         theme: 'awakening',
@@ -109,18 +109,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Buddhism',
           },
         ],
-        reflection_ko: '지금 떠오르는 생각을, 판단 없이 바라볼 수 있나요?',
+        reflection_ko: '지금 떠오르는 생각을, 싸우지 않고 바라볼 수 있나요?',
         reflection_en:
-          'Can you watch the thoughts arising right now without judging them?',
+          'Can you watch the thoughts arising right now without fighting them?',
       },
       {
         id: '1:3',
         chapter: 1,
         verse: 3,
         text_ko:
-          '깨달음은 먼 곳에 있지 않아요.\n오늘 아침 마신 물 한 잔, 거기서 시작돼요.',
+          '바라보는 법을 알았다면, 이제 멀리 갈 필요 없어요.\n오늘 아침 마신 물 한 잔, 거기에 깨어남이 있어요.',
         text_en:
-          'Awakening is not far away.\nIt begins in this morning\'s glass of water.',
+          'Once you learn to watch, you need not go far.\nThis morning\'s glass of water — awakening is already there.',
         traditions: ['선불교', '수피즘'],
         traditions_en: ['Zen', 'Sufism'],
         theme: 'awakening',
@@ -137,18 +137,18 @@ export const chapters: ScriptureChapter[] = [
           },
         ],
         reflection_ko:
-          '오늘 아침, 가장 평범한 순간에서 무엇을 발견할 수 있을까요?',
+          '가장 평범한 순간에서, 무엇을 발견할 수 있을까요?',
         reflection_en:
-          'What can you discover in the most ordinary moment of this morning?',
+          'What can you discover in the most ordinary moment today?',
       },
       {
         id: '1:4',
         chapter: 1,
         verse: 4,
         text_ko:
-          '세상이 혼란스러울수록, 내 안은 더 깊어져야 해요.\n깊은 바다는 표면의 폭풍을 모르듯이.',
+          '물 한 잔에서도 깨어남을 느꼈다면, 이제 더 깊이 들어가 보세요.\n세상이 시끄러울수록, 내 안은 더 고요해져야 해요.\n깊은 바다는 수면의 폭풍을 몰라요.',
         text_en:
-          'The louder the world, the deeper you must go.\nThe deep sea knows nothing of the storm above.',
+          'If you found awakening in a glass of water, now go deeper.\nThe louder the world, the stiller you must become.\nThe deep ocean knows nothing of the storm above.',
         traditions: ['스토아', '도교'],
         traditions_en: ['Stoicism', 'Taoism'],
         theme: 'awakening',
@@ -166,17 +166,17 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Taoism',
           },
         ],
-        reflection_ko: '지금 나의 내면은 어떤 깊이에 있나요?',
-        reflection_en: 'How deep is your inner stillness right now?',
+        reflection_ko: '지금 내 안은 얼마나 깊은 곳에 있나요?',
+        reflection_en: 'How deep within yourself can you reach right now?',
       },
       {
         id: '1:5',
         chapter: 1,
         verse: 5,
         text_ko:
-          '진짜 나를 찾겠다는 결심,\n그것 자체가 이미 첫 번째 깨어남이에요.',
+          '그 깊은 곳에서 진짜 나를 찾겠다고 결심하는 순간,\n깨어남은 이미 시작된 거예요.\n찾으려는 마음 자체가 첫 번째 빛이에요.',
         text_en:
-          'The resolve to find your true self \u2014\nthat itself is the first awakening.',
+          'The moment you resolve to find your true self in that depth,\nawakening has already begun.\nThe desire to seek is itself the first light.',
         traditions: ['기독교 신비주의', '불교'],
         traditions_en: ['Christian Mysticism', 'Buddhism'],
         theme: 'awakening',
@@ -193,18 +193,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Buddhism',
           },
         ],
-        reflection_ko: '나를 찾겠다는 마음은 어디에서 왔을까요?',
+        reflection_ko: '나를 찾으려는 그 마음은, 어디에서 왔을까요?',
         reflection_en:
-          'Where does your desire to find yourself come from?',
+          'Where does this desire to seek yourself come from?',
       },
       {
         id: '1:6',
         chapter: 1,
         verse: 6,
         text_ko:
-          '아는 것과 사는 것 사이에 간격이 있어요.\n그 간격을 줄이는 게 수행이에요.',
+          '하지만 찾겠다는 빛만으로는 부족해요.\n아는 것과 사는 것 사이에는 간격이 있어요.\n그 간격을 줄여가는 것, 그게 수행이에요.',
         text_en:
-          'There is a gap between knowing and living.\nClosing that gap \u2014 that is practice.',
+          'But the light of seeking alone is not enough.\nThere is a gap between knowing and living.\nClosing that gap, step by step \u2014 that is practice.',
         traditions: ['유교', '스토아'],
         traditions_en: ['Confucianism', 'Stoicism'],
         theme: 'awakening',
@@ -223,7 +223,7 @@ export const chapters: ScriptureChapter[] = [
           },
         ],
         reflection_ko:
-          '내가 알면서도 살지 못하고 있는 것은 무엇인가요?',
+          '알면서도 살지 못하고 있는 것은 무엇인가요?',
         reflection_en: 'What do you know to be true, yet fail to live by?',
       },
       {
@@ -231,9 +231,9 @@ export const chapters: ScriptureChapter[] = [
         chapter: 1,
         verse: 7,
         text_ko:
-          '모든 전통이 같은 말을 해요.\n"멈춰 봐. 그러면 보일 거야."',
+          '앎과 삶 사이의 그 간격을 어떻게 줄이냐고요?\n모든 전통이 같은 말을 해요.\n"멈춰봐. 그러면 보일 거야."',
         text_en:
-          'Every tradition says the same thing:\n"Be still. Then you will see."',
+          'How do you close that gap?\nEvery tradition says the same thing:\n"Be still. Then you will see."',
         traditions: ['범전통'],
         traditions_en: ['Universal'],
         theme: 'awakening',
@@ -264,9 +264,9 @@ export const chapters: ScriptureChapter[] = [
         chapter: 1,
         verse: 8,
         text_ko:
-          '종교 없이 태어날 수는 있어도, 자비 없이 태어날 수는 없어요.\n자비는 모든 가르침의 시작이에요.',
+          '멈추고 보면, 종교 너머의 것이 보여요.\n종교 없이 태어날 수는 있어도, 자비 없이 태어나는 사람은 없어요.\n자비야말로 모든 가르침의 시작이에요.',
         text_en:
-          'You can be born without religion, but not without the need for compassion.\nCompassion is where all teachings begin.',
+          'When you stop and look, you see something beyond religion.\nYou can be born without a faith, but not without compassion.\nCompassion is where every teaching begins.',
         traditions: ['불교', '범전통'],
         traditions_en: ['Buddhism', 'Universal'],
         theme: 'awakening',
@@ -285,18 +285,18 @@ export const chapters: ScriptureChapter[] = [
           },
         ],
         reflection_ko:
-          '종교와 상관없이, 자비는 내 삶에서 어떤 모습인가요?',
+          '종교와 상관없이, 내 삶에서 자비는 어떤 모습인가요?',
         reflection_en:
-          'Apart from any religion, what does compassion look like in your life?',
+          'Apart from any religion, what does compassion look like in your daily life?',
       },
       {
         id: '1:9',
         chapter: 1,
         verse: 9,
         text_ko:
-          '마음의 참된 평안은 욕망을 채울 때가 아니라,\n욕망을 내려놓을 때 찾아와요.',
+          '자비가 시작이라면, 평안은 그 열매예요.\n마음의 참된 평안은 욕망을 채울 때가 아니라,\n놓아줄 때 찾아와요.',
         text_en:
-          'True peace of mind comes not when desires are fulfilled,\nbut when they are released.',
+          'If compassion is the beginning, peace is its fruit.\nTrue peace comes not when desires are fulfilled,\nbut when you learn to let them go.',
         traditions: ['기독교', '불교'],
         traditions_en: ['Christianity', 'Buddhism'],
         theme: 'awakening',
@@ -313,18 +313,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Buddhism',
           },
         ],
-        reflection_ko: '지금 내가 꼭 쥐고 있는 것 중, 놓아줄 수 있는 건 뭘까요?',
+        reflection_ko: '지금 꼭 쥐고 있는 것 중에, 놓아줄 수 있는 건 뭘까요?',
         reflection_en:
-          'Of everything you cling to right now, what could you gently release?',
+          'Of everything you hold tight right now, what could you gently release?',
       },
       {
         id: '1:10',
         chapter: 1,
         verse: 10,
         text_ko:
-          '우리가 우주와 따로 있다고 느끼는 건 착각이에요.\n깊이 들여다보면, 나는 우주의 한 표현이에요.',
+          '놓아줄수록, 경계가 사라져요.\n나와 우주가 따로 있다는 느낌은 착각이에요.\n깊이 보면, 나는 우주가 스스로를 표현하는 한 방식이에요.',
         text_en:
-          'Feeling separate from the universe is an illusion.\nLook deeply: you are the universe expressing itself.',
+          'The more you release, the more boundaries dissolve.\nFeeling separate from the universe is an illusion.\nLook closely: you are the universe expressing itself.',
         traditions: ['베단타', '현대 영성'],
         traditions_en: ['Vedanta', 'Modern Spirituality'],
         theme: 'awakening',
@@ -341,7 +341,7 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Hinduism',
           },
         ],
-        reflection_ko: '나와 세상의 경계는 정말 있을까요?',
+        reflection_ko: '나와 세상 사이에, 진짜 경계가 있을까요?',
         reflection_en:
           'Is there truly a boundary between you and the world?',
       },
@@ -350,9 +350,9 @@ export const chapters: ScriptureChapter[] = [
         chapter: 1,
         verse: 11,
         text_ko:
-          '사랑도 기술이에요.\n삶도 기술이에요.\n깨어남도 기술이에요.\n기술은 연습으로 자라요.',
+          '우주와 하나라는 걸 아는 것으로 끝이 아니에요.\n사랑도, 삶도, 깨어남도 모두 기술이에요.\n기술은 매일의 연습으로 자라요.',
         text_en:
-          'Love is an art. Life is an art. Awakening is an art.\nAnd art grows through practice.',
+          'Knowing you are one with the universe is not the end.\nLove is an art. Life is an art. Awakening is an art.\nAnd every art grows through daily practice.',
         traditions: ['현대 영성', '유교'],
         traditions_en: ['Modern Spirituality', 'Confucianism'],
         theme: 'awakening',
@@ -370,7 +370,7 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Confucianism',
           },
         ],
-        reflection_ko: '깨어남을 위해, 오늘 내가 연습할 수 있는 작은 것은?',
+        reflection_ko: '깨어남을 위해, 오늘 연습할 수 있는 작은 것은 뭘까요?',
         reflection_en:
           'What small act of awakening can you practice today?',
       },
@@ -379,9 +379,9 @@ export const chapters: ScriptureChapter[] = [
         chapter: 1,
         verse: 12,
         text_ko:
-          '잠깐 멈춰서 숨을 깊이 들이마셔 보세요.\n누군가 나를 흔들어도, 나의 마음이 동의해야 흔들리는 거예요.',
+          '그 연습의 첫걸음은 간단해요.\n잠깐 멈추고, 숨을 깊이 쉬어보세요.\n세상이 나를 흔들어도, 내 마음이 동의하지 않으면 흔들리지 않아요.\n당신의 마음은, 당신의 것이에요.',
         text_en:
-          'Pause and breathe deeply.\nNo one can shake you unless your own mind agrees to be shaken.',
+          'The first step of that practice is simple.\nPause. Breathe deeply.\nThe world may try to shake you, but you only move when your mind agrees.\nYour mind belongs to you.',
         traditions: ['스토아', '불교'],
         traditions_en: ['Stoicism', 'Buddhism'],
         theme: 'awakening',
@@ -399,9 +399,9 @@ export const chapters: ScriptureChapter[] = [
           },
         ],
         reflection_ko:
-          '최근에 흔들렸던 순간, 내 마음이 먼저 동의하지는 않았나요?',
+          '최근에 흔들렸을 때, 내 마음이 먼저 동의하지는 않았나요?',
         reflection_en:
-          'When you were last shaken, did your mind first agree to be disturbed?',
+          'When you were last shaken, did your own mind first agree to be disturbed?',
       },
     ],
   },
@@ -415,18 +415,18 @@ export const chapters: ScriptureChapter[] = [
     title_en: 'Suffering and Healing',
     theme: 'suffering',
     intro_ko:
-      '상처가 없는 삶은 없어요.\n하지만 상처를 통과한 빛은, 다른 어떤 빛보다 따뜻해요.',
+      '누구나 아파요.\n하지만 아픔을 끝까지 통과한 사람은, 전에 없던 빛을 품게 돼요.',
     intro_en:
-      'No life is without wounds.\nBut light that passes through a wound is warmer than any other.',
+      'Everyone hurts.\nBut those who walk all the way through their pain carry a light they never had before.',
     verses: [
       {
         id: '2:1',
         chapter: 2,
         verse: 1,
         text_ko:
-          '고통은 벌이 아니에요.\n고통은 질문이에요. "무엇이 중요한가?"',
+          '고통은 벌이 아니에요.\n고통은 질문이에요. "지금, 나에게 정말 중요한 건 뭘까?"',
         text_en:
-          'Suffering is not punishment.\nSuffering is a question: "What truly matters?"',
+          'Suffering is not punishment.\nIt is a question: "What truly matters to me right now?"',
         traditions: ['불교', '기독교'],
         traditions_en: ['Buddhism', 'Christianity'],
         theme: 'suffering',
@@ -443,18 +443,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Christianity',
           },
         ],
-        reflection_ko: '지금의 고통이 내게 묻고 있는 질문은 무엇일까요?',
+        reflection_ko: '지금 내 고통이 묻고 있는 질문은 무엇인가요?',
         reflection_en:
-          'What question is your current pain asking you?',
+          'What question is your pain asking you right now?',
       },
       {
         id: '2:2',
         chapter: 2,
         verse: 2,
         text_ko:
-          '부러진 뼈가 더 단단해지듯,\n부러진 마음도 더 넓어질 수 있어요.',
+          '그 질문 앞에서 우리는 부러져요.\n하지만 부러진 뼈가 더 단단해지듯, 부러진 마음도 더 넓어질 수 있어요.',
         text_en:
-          'As a broken bone grows back stronger,\na broken heart can grow back wider.',
+          'That question can break us.\nBut as a broken bone grows back stronger, a broken heart can grow back wider.',
         traditions: ['수피즘', '스토아'],
         traditions_en: ['Sufism', 'Stoicism'],
         theme: 'suffering',
@@ -472,18 +472,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Stoicism',
           },
         ],
-        reflection_ko: '나의 부러진 곳은 어디이고, 거기서 어떤 빛이 들어오나요?',
+        reflection_ko: '내가 부러진 곳은 어디이고, 거기서 어떤 빛이 들어오나요?',
         reflection_en:
-          'Where are you broken, and what light is entering there?',
+          'Where have you been broken, and what light is entering there?',
       },
       {
         id: '2:3',
         chapter: 2,
         verse: 3,
         text_ko:
-          '"왜 나에게?"라고 묻지 마세요.\n"이것이 나에게 무엇을 가르치는가?"라고 물어보세요.',
+          '넓어지려면 먼저 질문을 바꿔야 해요.\n"왜 하필 나에게?"가 아니라, "이게 나에게 뭘 가르치고 있지?"라고요.',
         text_en:
-          'Do not ask, "Why me?"\nAsk, "What is this teaching me?"',
+          'To grow wider, first change the question.\nNot "Why me?" but "What is this teaching me?"',
         traditions: ['스토아', '이슬람'],
         traditions_en: ['Stoicism', 'Islam'],
         theme: 'suffering',
@@ -500,17 +500,17 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Stoicism',
           },
         ],
-        reflection_ko: '최근의 어려움이 가르쳐준 것은 무엇인가요?',
-        reflection_en: 'What has your recent difficulty taught you?',
+        reflection_ko: '최근 어려움이 내게 가르쳐준 게 있다면 뭘까요?',
+        reflection_en: 'What has a recent difficulty taught you?',
       },
       {
         id: '2:4',
         chapter: 2,
         verse: 4,
         text_ko:
-          '눈물을 흘리는 건 약한 게 아니에요.\n얼어붙은 땅이 녹을 때, 물이 흐르는 거예요.',
+          '배움이 시작되면, 눈물이 나올 수 있어요.\n그건 약한 게 아니에요. 얼어붙은 땅이 녹을 때 물이 흐르는 거예요.',
         text_en:
-          'Tears are not weakness.\nWhen frozen ground thaws, water flows.',
+          'When the learning begins, tears may come.\nThat is not weakness. When frozen ground thaws, water flows.',
         traditions: ['기독교', '도교'],
         traditions_en: ['Christianity', 'Taoism'],
         theme: 'suffering',
@@ -527,18 +527,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Taoism',
           },
         ],
-        reflection_ko: '마지막으로 눈물을 흘린 건 언제인가요? 그때 무엇이 녹았나요?',
+        reflection_ko: '마지막으로 눈물을 흘린 건 언제예요? 그때 무엇이 녹았나요?',
         reflection_en:
-          'When did you last cry? What thawed inside you?',
+          'When did you last let yourself cry? What thawed inside you?',
       },
       {
         id: '2:5',
         chapter: 2,
         verse: 5,
         text_ko:
-          '치유는 잊는 게 아니에요.\n기억하면서도 평화로울 수 있다는 걸 배우는 거예요.',
+          '눈물이 마르면 치유가 시작돼요.\n치유는 잊는 게 아니에요. 기억하면서도 평화로울 수 있다는 걸 배우는 거예요.',
         text_en:
-          'Healing is not forgetting.\nIt is learning to remember in peace.',
+          'When the tears dry, healing begins.\nHealing is not forgetting. It is learning to remember in peace.',
         traditions: ['불교', '현대 심리학'],
         traditions_en: ['Buddhism', 'Modern Psychology'],
         theme: 'suffering',
@@ -555,7 +555,7 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Buddhism',
           },
         ],
-        reflection_ko: '기억하면서도 평화로울 수 있는 상처가 있나요?',
+        reflection_ko: '기억하면서도 고요할 수 있는 상처가 있나요?',
         reflection_en:
           'Is there a wound you can remember and still feel at peace?',
       },
@@ -564,9 +564,9 @@ export const chapters: ScriptureChapter[] = [
         chapter: 2,
         verse: 6,
         text_ko:
-          '당신의 상처가 다른 누군가의 문이 될 수 있어요.\n아픈 만큼 깊이 공감할 수 있으니까요.',
+          '평화롭게 기억할 수 있게 되면, 그 상처는 문이 돼요.\n내 아픔을 통과한 만큼, 다른 사람의 아픔에 닿을 수 있으니까요.',
         text_en:
-          'Your wound can become a door for someone else.\nThe depth of your pain is the depth of your compassion.',
+          'Once you can remember in peace, the wound becomes a door.\nThe deeper you have hurt, the deeper you can reach into another\u2019s pain.',
         traditions: ['기독교', '불교'],
         traditions_en: ['Christianity', 'Buddhism'],
         theme: 'suffering',
@@ -583,18 +583,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Sufism',
           },
         ],
-        reflection_ko: '나의 아픔이 누군가에게 위로가 된 적이 있나요?',
+        reflection_ko: '내 아픔이 누군가에게 위로가 된 적이 있나요?',
         reflection_en:
-          'Has your pain ever become a source of comfort for someone else?',
+          'Has your pain ever become comfort for someone else?',
       },
       {
         id: '2:7',
         chapter: 2,
         verse: 7,
         text_ko:
-          '고통을 피하려 하면 고통이 커져요.\n고통을 안아주면, 고통이 변해요.',
+          '다른 사람의 아픔에 닿으려면, 먼저 내 아픔을 피하지 않아야 해요.\n고통을 피하면 커지지만, 안아주면 달라져요.',
         text_en:
-          'Run from pain and it grows.\nHold it gently, and it transforms.',
+          'To reach another\u2019s pain, you must first stop running from your own.\nRun from pain and it grows. Hold it gently, and it transforms.',
         traditions: ['불교', '수피즘'],
         traditions_en: ['Buddhism', 'Sufism'],
         theme: 'suffering',
@@ -612,7 +612,7 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Universal',
           },
         ],
-        reflection_ko: '피하고 있는 고통이 있다면, 오늘 살짝 안아줄 수 있을까요?',
+        reflection_ko: '지금 피하고 있는 고통이 있다면, 오늘 살짝 안아줄 수 있을까요?',
         reflection_en:
           'Is there a pain you are avoiding? Could you gently hold it today?',
       },
@@ -621,9 +621,9 @@ export const chapters: ScriptureChapter[] = [
         chapter: 2,
         verse: 8,
         text_ko:
-          '가장 깊은 밤 뒤에 새벽이 오듯,\n가장 깊은 고통 뒤에 이해가 와요.',
+          '안아주고 나면, 밤이 조금씩 걷혀요.\n가장 깊은 밤 뒤에 새벽이 오듯, 가장 깊은 고통 뒤에 이해가 찾아와요.',
         text_en:
-          'As dawn follows the deepest night,\nunderstanding follows the deepest pain.',
+          'Once you hold it, the night begins to lift.\nAs dawn follows the deepest dark, understanding follows the deepest pain.',
         traditions: ['이슬람', '기독교', '도교'],
         traditions_en: ['Islam', 'Christianity', 'Taoism'],
         theme: 'suffering',
@@ -639,18 +639,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Christianity',
           },
         ],
-        reflection_ko: '가장 힘들었던 시간이 결국 나에게 준 선물은 무엇인가요?',
+        reflection_ko: '가장 힘들었던 시간이 결국 내게 준 선물은 뭐였나요?',
         reflection_en:
-          'What gift did your hardest season eventually give you?',
+          'What gift did your hardest season eventually bring you?',
       },
       {
         id: '2:9',
         chapter: 2,
         verse: 9,
         text_ko:
-          '무력감을 키우는 건 고통 그 자체가 아니에요.\n"내가 이걸 바꿀 수 없다"는 생각이에요.',
+          '새벽이 와도 무력감이 남을 수 있어요.\n하지만 기억하세요. 무력감을 키우는 건 고통이 아니라, "나는 이걸 바꿀 수 없어"라는 생각이에요.',
         text_en:
-          'It is not pain itself that breeds helplessness.\nIt is the belief: "I cannot change this."',
+          'Even after dawn, helplessness can linger.\nBut remember: it is not the pain that feeds it. It is the belief, "I cannot change this."',
         traditions: ['스토아', '현대 심리학'],
         traditions_en: ['Stoicism', 'Modern Psychology'],
         theme: 'suffering',
@@ -669,18 +669,18 @@ export const chapters: ScriptureChapter[] = [
           },
         ],
         reflection_ko:
-          '"바꿀 수 없다"고 믿고 있는 것 중, 정말 그런 게 맞나요?',
+          '"바꿀 수 없다"고 믿고 있는 것 중, 정말 그런 건가요?',
         reflection_en:
-          'Of the things you believe you cannot change, is that truly so?',
+          'Among the things you believe you cannot change, is that truly so?',
       },
       {
         id: '2:10',
         chapter: 2,
         verse: 10,
         text_ko:
-          '모든 종교는 결국 하나의 진리를 말해요.\n고통에는 끝이 있고, 그 끝에는 이해가 있다는 것.',
+          '바꿀 수 있다는 믿음이 돌아오면, 비로소 보여요.\n모든 전통이 말해온 하나의 진리가. 고통에는 끝이 있고, 그 끝에는 이해가 있다는 것.',
         text_en:
-          'All traditions speak one truth about suffering:\nit has an end, and at that end is understanding.',
+          'When the belief that you can change returns, you finally see it.\nThe one truth every tradition has spoken: suffering has an end, and at that end is understanding.',
         traditions: ['불교', '범전통'],
         traditions_en: ['Buddhism', 'Universal'],
         theme: 'suffering',
@@ -698,18 +698,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Buddhism',
           },
         ],
-        reflection_ko: '고통의 끝에서, 내가 이해하게 된 것은 무엇인가요?',
+        reflection_ko: '고통의 끝에서 이해하게 된 것이 있나요?',
         reflection_en:
-          'At the end of your suffering, what did you come to understand?',
+          'At the far side of your suffering, what did you come to understand?',
       },
       {
         id: '2:11',
         chapter: 2,
         verse: 11,
         text_ko:
-          '사랑과 고통은 한 쌍이에요.\n사랑 없이는 아프지 않고, 아픔 없이는 깊이 사랑할 수 없어요.',
+          '그 이해 안에서 깨닫게 돼요.\n사랑과 고통은 한 쌍이라는 걸. 사랑하지 않으면 아프지 않고, 아파보지 않으면 깊이 사랑할 수 없어요.',
         text_en:
-          'Love and suffering are a pair.\nWithout love there is no pain; without pain, no depth of love.',
+          'Inside that understanding, you realize:\nlove and suffering are a pair. Without love there is no pain, and without pain there is no depth of love.',
         traditions: ['수피즘', '기독교'],
         traditions_en: ['Sufism', 'Christianity'],
         theme: 'suffering',
@@ -727,7 +727,7 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Sufism',
           },
         ],
-        reflection_ko: '나의 가장 큰 아픔은, 가장 큰 사랑과 연결되어 있나요?',
+        reflection_ko: '내 가장 큰 아픔은, 가장 큰 사랑과 이어져 있나요?',
         reflection_en:
           'Is your deepest pain connected to your deepest love?',
       },
@@ -736,9 +736,9 @@ export const chapters: ScriptureChapter[] = [
         chapter: 2,
         verse: 12,
         text_ko:
-          '존경스러운 방식으로 고통을 감내하는 것이,\n수치스러운 방식으로 기쁨을 쫓는 것보다 나아요.',
+          '그러니 고통 앞에서 도망치지 마세요.\n존엄하게 견디는 것이, 수치스럽게 기쁨을 쫓는 것보다 나아요.\n그것이 고통을 통과한 사람의 빛이에요.',
         text_en:
-          'Better to endure pain with dignity\nthan to chase joy without it.',
+          'So do not run from pain.\nTo endure it with dignity is better than to chase joy without it.\nThat is the light of those who have walked through suffering.',
         traditions: ['스토아', '유교'],
         traditions_en: ['Stoicism', 'Confucianism'],
         theme: 'suffering',
@@ -770,17 +770,17 @@ export const chapters: ScriptureChapter[] = [
     title_ko: '사랑과 연결',
     title_en: 'Love and Connection',
     theme: 'love',
-    intro_ko: '사랑은 감정이 아니에요.\n사랑은 존재 방식이에요.',
-    intro_en: 'Love is not a feeling.\nLove is a way of being.',
+    intro_ko: '사랑은 이해하는 게 아니에요.\n사랑은 그 안으로 들어가는 거예요.',
+    intro_en: 'Love is not something you understand.\nIt is something you enter.',
     verses: [
       {
         id: '3:1',
         chapter: 3,
         verse: 1,
         text_ko:
-          '사랑한다는 건, 상대를 바꾸려는 게 아니에요.\n있는 그대로를 바라보는 용기예요.',
+          '사랑한다는 건, 상대를 고치려는 게 아니에요.\n있는 그대로 바라보는 거예요.\n그 시선 자체가 사랑이에요.',
         text_en:
-          'To love is not to change the other.\nIt is the courage to see them as they are.',
+          'To love is not to fix someone.\nIt is to see them as they are.\nThat gaze itself is love.',
         traditions: ['불교', '기독교'],
         traditions_en: ['Buddhism', 'Christianity'],
         theme: 'love',
@@ -797,18 +797,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Buddhism',
           },
         ],
-        reflection_ko: '내가 사랑하는 사람을, 있는 그대로 바라보고 있나요?',
+        reflection_ko: '내가 사랑하는 사람을, 고치려 하지 않고 바라본 적이 있나요?',
         reflection_en:
-          'Are you seeing the person you love as they truly are?',
+          'Have you ever looked at someone you love without wanting to change them?',
       },
       {
         id: '3:2',
         chapter: 3,
         verse: 2,
         text_ko:
-          '나무가 뿌리를 깊이 내리듯, 사랑도 먼저 자기 안에 뿌리를 내려야 해요.\n텅 빈 그릇은 채워줄 수 없으니까요.',
+          '그런데 누군가를 있는 그대로 보려면,\n먼저 나를 있는 그대로 볼 수 있어야 해요.\n자기 안에 뿌리 내리지 못한 사랑은 오래가지 못해요.',
         text_en:
-          'As a tree roots itself deep, love must first root within.\nAn empty cup cannot pour.',
+          'But to see someone as they are,\nyou must first see yourself as you are.\nLove that has no roots within you cannot last.',
         traditions: ['베단타', '현대 영성'],
         traditions_en: ['Vedanta', 'Modern Spirituality'],
         theme: 'love',
@@ -825,18 +825,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Hinduism',
           },
         ],
-        reflection_ko: '나 자신에게 충분히 사랑을 주고 있나요?',
+        reflection_ko: '나 자신을, 있는 그대로 바라보고 있나요?',
         reflection_en:
-          'Are you giving yourself enough love before giving it to others?',
+          'Are you seeing yourself as you truly are?',
       },
       {
         id: '3:3',
         chapter: 3,
         verse: 3,
         text_ko:
-          '진짜 연결은 같은 생각을 하는 게 아니에요.\n다른 생각을 하면서도 손을 놓지 않는 거예요.',
+          '나를 알고 나면, 다른 사람이 보여요.\n같은 생각을 하지 않아도 손을 잡을 수 있어요.\n다름이 벽이 아니라 다리가 돼요.',
         text_en:
-          'True connection is not thinking alike.\nIt is thinking differently and still holding hands.',
+          'Once you know yourself, you begin to see others.\nYou can hold hands without thinking alike.\nDifference becomes a bridge, not a wall.',
         traditions: ['유교', '기독교'],
         traditions_en: ['Confucianism', 'Christianity'],
         theme: 'love',
@@ -853,18 +853,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Christianity',
           },
         ],
-        reflection_ko: '나와 다른 생각을 가진 사람의 손을 잡을 수 있나요?',
+        reflection_ko: '나와 다른 사람의 손을, 오늘 잡아볼 수 있나요?',
         reflection_en:
-          'Can you hold hands with someone who thinks differently?',
+          'Can you reach for the hand of someone different from you today?',
       },
       {
         id: '3:4',
         chapter: 3,
         verse: 4,
         text_ko:
-          '자비는 동정이 아니에요.\n"나도 그럴 수 있었어"라는 깊은 인식이에요.',
+          '다름을 건너려면 자비가 필요해요.\n자비는 위에서 내려다보는 동정이 아니에요.\n"나도 저럴 수 있었어"라는 겸손한 인식이에요.',
         text_en:
-          'Compassion is not pity.\nIt is the deep recognition: "That could have been me."',
+          'Crossing difference takes compassion.\nCompassion is not pity looking down.\nIt is the humble recognition: "I could have been there too."',
         traditions: ['불교', '이슬람'],
         traditions_en: ['Buddhism', 'Islam'],
         theme: 'love',
@@ -882,18 +882,18 @@ export const chapters: ScriptureChapter[] = [
           },
         ],
         reflection_ko:
-          '오늘 만난 누군가에게, "나도 그럴 수 있었어"라고 느껴본 적 있나요?',
+          '오늘 누군가를 보며 "나도 저럴 수 있었어"라고 느낀 적 있나요?',
         reflection_en:
-          'Have you looked at someone today and thought, "That could have been me"?',
+          'Did you look at someone today and feel, "I could have been there too"?',
       },
       {
         id: '3:5',
         chapter: 3,
         verse: 5,
         text_ko:
-          '용서는 상대를 위한 게 아니에요.\n내가 자유로워지기 위한 거예요.',
+          '자비로 바라보면, 용서도 가능해져요.\n용서는 상대를 위한 게 아니에요.\n나를 묶고 있는 사슬을 푸는 거예요.',
         text_en:
-          'Forgiveness is not for them.\nIt is for your own freedom.',
+          'When you see with compassion, forgiveness becomes possible.\nForgiveness is not for them.\nIt is unlocking the chain that binds you.',
         traditions: ['기독교', '스토아'],
         traditions_en: ['Christianity', 'Stoicism'],
         theme: 'love',
@@ -910,18 +910,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Christianity',
           },
         ],
-        reflection_ko: '아직 용서하지 못한 사람이 있다면, 그것이 나를 묶고 있나요?',
+        reflection_ko: '아직 용서하지 못한 것이 있다면, 그것이 나를 묶고 있진 않나요?',
         reflection_en:
-          'If there is someone you haven\'t forgiven, is it binding you?',
+          'If there is something you have not forgiven, is it still binding you?',
       },
       {
         id: '3:6',
         chapter: 3,
         verse: 6,
         text_ko:
-          '누군가를 깊이 이해하려면, 먼저 판단을 내려놓으세요.\n판단은 귀를 막고, 이해는 귀를 열어요.',
+          '용서가 시작되면, 판단이 내려가요.\n판단은 귀를 막지만, 열린 마음은 귀를 열어요.\n그때 비로소 상대가 들려요.',
         text_en:
-          'To deeply understand someone, first set down your judgment.\nJudgment closes the ears; understanding opens them.',
+          'When forgiveness begins, judgment falls away.\nJudgment closes the ears, but an open heart opens them.\nOnly then can you truly hear the other.',
         traditions: ['유교', '수피즘'],
         traditions_en: ['Confucianism', 'Sufism'],
         theme: 'love',
@@ -939,18 +939,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Sufism',
           },
         ],
-        reflection_ko: '누군가에 대한 판단을 잠시 내려놓아볼 수 있나요?',
+        reflection_ko: '누군가에 대한 판단을 내려놓으면, 무엇이 들리나요?',
         reflection_en:
-          'Can you set down your judgment of someone, just for a moment?',
+          'If you set down your judgment of someone, what do you hear?',
       },
       {
         id: '3:7',
         chapter: 3,
         verse: 7,
         text_ko:
-          '우리는 모두 같은 바다의 파도예요.\n모양은 다르지만, 근원은 하나예요.',
+          '판단 없이 듣다 보면, 경계가 흐려져요.\n나와 너 사이의 벽이 사라지면,\n우리가 같은 바다의 파도였다는 걸 알게 돼요.',
         text_en:
-          'We are all waves of the same ocean.\nDifferent in shape, one in source.',
+          'Listen without judgment, and the boundaries blur.\nWhen the wall between you and me dissolves,\nyou see that we were always waves of the same ocean.',
         traditions: ['베단타', '수피즘', '도교'],
         traditions_en: ['Vedanta', 'Sufism', 'Taoism'],
         theme: 'love',
@@ -967,18 +967,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Vedanta',
           },
         ],
-        reflection_ko: '내 옆의 사람과 나는 어떤 근원을 공유하고 있을까요?',
+        reflection_ko: '내 옆의 사람과 나는 어떤 바다를 함께 이루고 있나요?',
         reflection_en:
-          'What source do you share with the person beside you?',
+          'What ocean do you and the person beside you share?',
       },
       {
         id: '3:8',
         chapter: 3,
         verse: 8,
         text_ko:
-          '한 사람을 진심으로 사랑하면, 세상 전체를 사랑하게 돼요.\n사랑은 하나에서 시작해서 전부로 퍼져요.',
+          '같은 바다라는 걸 알면, 한 사람을 향한 사랑이 세상 전체로 퍼져요.\n사랑은 한 곳에서 시작하지만, 거기서 멈추지 않아요.',
         text_en:
-          'Love one person truly, and you learn to love the whole world.\nLove starts with one and spreads to all.',
+          'Once you know we share one ocean, love for one person ripples out to the whole world.\nLove begins in one place, but it never stays there.',
         traditions: ['기독교', '현대 영성'],
         traditions_en: ['Christianity', 'Modern Spirituality'],
         theme: 'love',
@@ -995,18 +995,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Christianity',
           },
         ],
-        reflection_ko: '내가 가장 깊이 사랑하는 한 사람은 누구인가요?',
+        reflection_ko: '한 사람을 깊이 사랑해본 적 있나요? 그 사랑이 어디까지 퍼졌나요?',
         reflection_en:
-          'Who is the one person you love most deeply?',
+          'Have you loved one person deeply? How far did that love travel?',
       },
       {
         id: '3:9',
         chapter: 3,
         verse: 9,
         text_ko:
-          '모든 지식을 갖고 있어도, 사랑이 없다면 텅 빈 거예요.\n사랑이 있어야 지식이 살아요.',
+          '세상의 모든 지식을 갖고 있어도, 사랑이 없으면 텅 빈 거예요.\n사랑이 지식에 숨을 불어넣어야, 지식이 살아 움직여요.',
         text_en:
-          'All knowledge without love is hollow.\nLove is what brings knowledge to life.',
+          'You can hold all the knowledge in the world, but without love it is empty.\nLove breathes life into knowledge. Only then does it move.',
         traditions: ['기독교', '불교'],
         traditions_en: ['Christianity', 'Buddhism'],
         theme: 'love',
@@ -1023,18 +1023,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Christianity',
           },
         ],
-        reflection_ko: '내가 아는 것들은, 사랑과 연결되어 있나요?',
+        reflection_ko: '내가 아는 것들 속에, 사랑이 숨 쉬고 있나요?',
         reflection_en:
-          'Is your knowledge connected to love?',
+          'Is love breathing inside the things you know?',
       },
       {
         id: '3:10',
         chapter: 3,
         verse: 10,
         text_ko:
-          '조건 없는 사랑이 세상에서 가장 근본적인 진리예요.\n그 사랑이 모든 경전의 심장이에요.',
+          '사랑이 지식보다 앞서는 이유가 있어요.\n조건 없는 사랑이야말로 모든 경전이 가리키는 하나의 진리이기 때문이에요.\n그 사랑 앞에서, 모든 가르침은 하나가 돼요.',
         text_en:
-          'Unconditional love is the most fundamental truth.\nIt is the beating heart of every scripture.',
+          'There is a reason love comes before knowledge.\nUnconditional love is the single truth every scripture points to.\nBefore that love, all teachings become one.',
         traditions: ['기독교', '수피즘', '범전통'],
         traditions_en: ['Christianity', 'Sufism', 'Universal'],
         theme: 'love',
@@ -1052,18 +1052,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Sufism',
           },
         ],
-        reflection_ko: '조건 없이 사랑받고 있다고 느낀 적이 있나요?',
+        reflection_ko: '조건 없이 사랑받았다고 느낀 순간이 있나요?',
         reflection_en:
-          'Have you ever felt loved without any conditions?',
+          'Was there a moment you felt loved without any conditions?',
       },
       {
         id: '3:11',
         chapter: 3,
         verse: 11,
         text_ko:
-          '두 존재가 하나로 되면서도 둘로 남아 있어요.\n이것이 사랑의 역설이에요.',
+          '그래서 사랑은 역설이에요.\n둘이 하나가 되면서도, 둘로 남아 있어요.\n이 말이 머리로 이해되지 않아도 괜찮아요.\n사랑 안에 들어가 보면, 그냥 알게 돼요.',
         text_en:
-          'Two beings become one, yet remain two.\nThis is the paradox of love.',
+          'And so love is a paradox.\nTwo become one, yet remain two.\nIt is all right if this does not make sense to your mind.\nStep inside love, and you will simply know.',
         traditions: ['현대 영성', '수피즘'],
         traditions_en: ['Modern Spirituality', 'Sufism'],
         theme: 'love',
@@ -1082,9 +1082,9 @@ export const chapters: ScriptureChapter[] = [
           },
         ],
         reflection_ko:
-          '사랑하는 사람과 하나이면서도, 나로 남아 있을 수 있나요?',
+          '사랑 안에서, 하나이면서 나로 남아 있는 순간을 느낀 적 있나요?',
         reflection_en:
-          'Can you be one with someone you love and still remain yourself?',
+          'Have you ever felt both one with someone and fully yourself at the same time?',
       },
     ],
   },
@@ -1098,18 +1098,18 @@ export const chapters: ScriptureChapter[] = [
     title_en: 'Life and Death',
     theme: 'life_death',
     intro_ko:
-      '삶과 죽음은 반대가 아니에요.\n삶과 죽음은 하나의 호흡이에요.',
+      '삶과 죽음은 서로 다른 게 아니에요.\n같은 강물의 물결과 바다예요.',
     intro_en:
-      'Life and death are not opposites.\nThey are one breath.',
+      'Life and death are not two different things.\nThey are the wave and the ocean of the same water.',
     verses: [
       {
         id: '4:1',
         chapter: 4,
         verse: 1,
         text_ko:
-          '꽃이 지는 걸 슬퍼하지 마세요.\n꽃이 졌기에 열매가 와요.',
+          '꽃은 지면서 열매를 준비해요.\n놓아야 할 것을 놓을 때, 새로운 것이 익어가요.',
         text_en:
-          'Do not grieve the falling flower.\nThe fruit comes because the blossom fell.',
+          'A flower falls to make way for fruit.\nWhen you release what must go, something new ripens.',
         traditions: ['불교', '도교'],
         traditions_en: ['Buddhism', 'Taoism'],
         theme: 'life_death',
@@ -1127,18 +1127,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Buddhism',
           },
         ],
-        reflection_ko: '지금 내 삶에서 져야 할 꽃은 무엇인가요?',
+        reflection_ko: '지금 놓아야 할 것은 무엇인가요? 그것이 떠나면 무엇이 익을까요?',
         reflection_en:
-          'What flower in your life needs to fall so the fruit can come?',
+          'What do you need to release right now? What might ripen once it falls away?',
       },
       {
         id: '4:2',
         chapter: 4,
         verse: 2,
         text_ko:
-          '매 순간은 작은 탄생이고, 작은 죽음이에요.\n지금 이 숨을 소중히 하세요. 다음 숨은 약속된 게 아니에요.',
+          '이렇게 무언가 익어가는 동안에도, 매 순간은 작은 탄생이자 작은 죽음이에요.\n들숨과 날숨 사이에, 삶 전체가 들어 있어요.',
         text_en:
-          'Every moment is a small birth and a small death.\nCherish this breath. The next is not promised.',
+          'Even as something ripens, each moment is a small birth and a small death.\nYour whole life fits between one inhale and one exhale.',
         traditions: ['이슬람', '스토아'],
         traditions_en: ['Islam', 'Stoicism'],
         theme: 'life_death',
@@ -1155,18 +1155,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Stoicism',
           },
         ],
-        reflection_ko: '이 숨이 마지막이라면, 지금 무엇을 하고 싶나요?',
+        reflection_ko: '지금 이 숨이 마지막이라면, 무엇을 하고 싶나요?',
         reflection_en:
-          'If this breath were your last, what would you want to do right now?',
+          'If this breath were your last, what would you want to be doing right now?',
       },
       {
         id: '4:3',
         chapter: 4,
         verse: 3,
         text_ko:
-          '우리는 영원히 사는 것처럼 미루고,\n내일 죽는 것처럼 두려워해요.\n그 사이에서 오늘을 놓쳐요.',
+          '그런데 우리는 이 숨을 당연하게 여기며 미뤄요.\n영원히 살 것처럼 미루고, 내일 죽을 것처럼 두려워해요.\n그 사이에서 오늘이 빠져나가요.',
         text_en:
-          'We postpone as if we live forever\nand fear as if we die tomorrow.\nBetween the two, we lose today.',
+          'Yet we take this breath for granted and keep postponing.\nWe delay as if we live forever, and fear as if we die tomorrow.\nIn between, today slips away.',
         traditions: ['스토아', '불교'],
         traditions_en: ['Stoicism', 'Buddhism'],
         theme: 'life_death',
@@ -1183,18 +1183,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Stoicism',
           },
         ],
-        reflection_ko: '미루고 있는 것 하나를, 오늘 시작할 수 있을까요?',
+        reflection_ko: '오늘이 빠져나가기 전에, 지금 시작할 수 있는 것은 무엇인가요?',
         reflection_en:
-          'Is there one thing you\'ve been putting off that you could start today?',
+          'Before today slips away, what is one thing you could begin right now?',
       },
       {
         id: '4:4',
         chapter: 4,
         verse: 4,
         text_ko:
-          '떠나간 사람은 사라진 게 아니에요.\n비가 되어 내리고, 바람이 되어 불어요.',
+          '오늘을 놓치지 않겠다고 결심하면, 떠나간 사람들도 다르게 보여요.\n그들은 사라진 게 아니에요. 비가 되어 내리고, 바람이 되어 불어와요.',
         text_en:
-          'Those who have departed are not gone.\nThey fall as rain. They blow as wind.',
+          'When you choose not to lose today, even those who have gone look different.\nThey have not vanished. They fall as rain. They blow as wind.',
         traditions: ['불교', '원주민 영성'],
         traditions_en: ['Buddhism', 'Indigenous Spirituality'],
         theme: 'life_death',
@@ -1211,18 +1211,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Indigenous Spirituality',
           },
         ],
-        reflection_ko: '떠나간 사람이 남긴 바람은, 어디에서 불어오나요?',
+        reflection_ko: '떠나간 사람의 바람이 불어올 때, 어디에서 느끼나요?',
         reflection_en:
-          'Where do you feel the presence of those who have passed?',
+          'When the wind of someone who has passed blows through, where do you feel it?',
       },
       {
         id: '4:5',
         chapter: 4,
         verse: 5,
         text_ko:
-          '죽음을 생각하는 건 우울한 게 아니에요.\n삶을 선명하게 만드는 렌즈예요.',
+          '그 바람을 느끼려면, 죽음을 바라볼 줄 알아야 해요.\n죽음을 바라보는 건 우울한 게 아니에요.\n삶의 윤곽을 선명하게 해주는 빛이에요.',
         text_en:
-          'Contemplating death is not morbid.\nIt is a lens that sharpens life.',
+          'To feel that wind, you need to learn to face death.\nFacing death is not morbid.\nIt is the light that sharpens the outline of life.',
         traditions: ['스토아', '불교', '기독교'],
         traditions_en: ['Stoicism', 'Buddhism', 'Christianity'],
         theme: 'life_death',
@@ -1239,18 +1239,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Stoicism',
           },
         ],
-        reflection_ko: '죽음을 생각하면, 지금 이 삶이 어떻게 달라 보이나요?',
+        reflection_ko: '죽음을 바라볼 때, 지금 이 삶은 어떤 모습으로 보이나요?',
         reflection_en:
-          'When you think about death, how does it change the way you see life?',
+          'When you look at death, how does this life appear to you?',
       },
       {
         id: '4:6',
         chapter: 4,
         verse: 6,
         text_ko:
-          '씨앗은 어둠 속에서 깨져야 싹이 나요.\n끝이라고 느끼는 순간이, 시작일 수 있어요.',
+          '그 빛 아래에서 보면, 끝은 진짜 끝이 아니에요.\n씨앗은 어둠 속에서 깨져야 싹이 트여요.\n끝이라고 느끼는 바로 그 순간이, 시작이에요.',
         text_en:
-          'A seed must break open in darkness to sprout.\nWhat feels like an ending may be a beginning.',
+          'Under that light, an ending is never truly the end.\nA seed must crack open in darkness to sprout.\nThe very moment that feels like an ending is a beginning.',
         traditions: ['기독교', '수피즘'],
         traditions_en: ['Christianity', 'Sufism'],
         theme: 'life_death',
@@ -1267,18 +1267,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Sufism',
           },
         ],
-        reflection_ko: '지금 끝나고 있는 무언가가, 새로운 시작은 아닐까요?',
+        reflection_ko: '지금 끝나고 있는 무언가 속에서, 어떤 시작이 보이나요?',
         reflection_en:
-          'Could what is ending in your life actually be a new beginning?',
+          'In something that is ending right now, what beginning can you see?',
       },
       {
         id: '4:7',
         chapter: 4,
         verse: 7,
         text_ko:
-          '존재한다는 것 자체가 기적이에요.\n수십억 년의 별과 먼지가 당신이 되었어요.',
+          '끝과 시작이 하나라면, 존재 자체가 기적이에요.\n수십억 년의 별먼지가 모여 지금의 당신이 되었어요.',
         text_en:
-          'To exist at all is a miracle.\nBillions of years of stars and dust became you.',
+          'If endings and beginnings are one, then existence itself is a miracle.\nBillions of years of stardust gathered to become you.',
         traditions: ['현대 영성', '힌두교'],
         traditions_en: ['Modern Spirituality', 'Hinduism'],
         theme: 'life_death',
@@ -1295,17 +1295,17 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Hinduism',
           },
         ],
-        reflection_ko: '내가 존재한다는 사실이, 오늘 얼마나 놀라운가요?',
-        reflection_en: 'How miraculous does your existence feel today?',
+        reflection_ko: '별먼지였던 내가 지금 여기 있다는 사실이, 오늘은 얼마나 놀라운가요?',
+        reflection_en: 'You were once stardust. How miraculous does your existence feel today?',
       },
       {
         id: '4:8',
         chapter: 4,
         verse: 8,
         text_ko:
-          '삶과 죽음은 소리와 침묵처럼 함께 있어요.\n하나가 없으면 다른 하나도 없어요.',
+          '별먼지가 사람이 되었듯, 삶과 죽음도 떼어놓을 수 없어요.\n소리와 침묵처럼, 하나가 없으면 다른 하나도 없어요.',
         text_en:
-          'Life and death exist together, like sound and silence.\nWithout one, the other cannot be.',
+          'Just as stardust became a person, life and death cannot be pulled apart.\nLike sound and silence \u2014 without one, the other cannot exist.',
         traditions: ['도교', '베단타'],
         traditions_en: ['Taoism', 'Vedanta'],
         theme: 'life_death',
@@ -1323,18 +1323,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Taoism',
           },
         ],
-        reflection_ko: '삶의 소리와 죽음의 침묵 사이에서, 나는 무엇을 듣고 있나요?',
+        reflection_ko: '삶의 소리와 죽음의 침묵 사이에서, 무엇이 들리나요?',
         reflection_en:
-          'Between the sound of life and the silence of death, what do you hear?',
+          'Between the sound of living and the silence of death, what do you hear?',
       },
       {
         id: '4:9',
         chapter: 4,
         verse: 9,
         text_ko:
-          '삶의 덧없음은 가치를 깎아내리지 않아요.\n오히려 드높여요.\n운명을 사랑한다는 건, 덧없음을 사랑한다는 뜻이에요.',
+          '그 소리와 침묵이 함께이기에, 삶은 덧없어도 가치가 줄지 않아요.\n오히려 더 빛나요.\n운명을 사랑한다는 건, 이 덧없음까지 사랑한다는 뜻이에요.',
         text_en:
-          'The fleeting nature of life does not diminish its value.\nIt elevates it.\nTo love your fate is to love its impermanence.',
+          'Because sound and silence are together, life does not lose its worth by being brief.\nIt shines brighter.\nTo love your fate means loving its impermanence too.',
         traditions: ['스토아', '불교'],
         traditions_en: ['Stoicism', 'Buddhism'],
         theme: 'life_death',
@@ -1351,18 +1351,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Stoicism',
           },
         ],
-        reflection_ko: '덧없기에 더 소중한 것은 무엇인가요?',
+        reflection_ko: '덧없기에 오히려 더 소중하게 느껴지는 것은 무엇인가요?',
         reflection_en:
-          'What is more precious precisely because it will not last?',
+          'What feels more precious to you precisely because it will not last?',
       },
       {
         id: '4:10',
         chapter: 4,
         verse: 10,
         text_ko:
-          '사람은 몸에서 마음으로, 마음에서 정신으로, 정신에서 영혼으로 바뀌어가는 존재예요.',
+          '덧없음을 사랑할 수 있다면, 변화도 두렵지 않아요.\n사람은 몸에서 마음으로, 마음에서 정신으로, 정신에서 영혼으로 바뀌어가는 존재예요.',
         text_en:
-          'A person transforms from body to mind, mind to spirit, spirit to soul.',
+          'If you can love impermanence, change holds no fear.\nA person transforms \u2014 from body to mind, mind to spirit, spirit to soul.',
         traditions: ['한국 영성', '베단타'],
         traditions_en: ['Korean Spirituality', 'Vedanta'],
         theme: 'life_death',
@@ -1379,18 +1379,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Hinduism',
           },
         ],
-        reflection_ko: '지금 나는 몸, 마음, 정신, 영혼 중 어디에 있나요?',
+        reflection_ko: '지금 나는 몸, 마음, 정신, 영혼 중 어디쯤에 있나요?',
         reflection_en:
-          'Where are you now \u2014 in body, mind, spirit, or soul?',
+          'Where are you now along that path \u2014 body, mind, spirit, or soul?',
       },
       {
         id: '4:11',
         chapter: 4,
         verse: 11,
         text_ko:
-          '분리된 나란 없다는 통찰,\n이것이 모든 시대의 현자들이 말해온 것이에요.',
+          '영혼으로 나아갈수록 경계가 사라져요.\n나와 세상 사이에 분리란 없다는 것,\n이것이 모든 시대의 현자들이 말해온 핵심이에요.',
         text_en:
-          'The insight that there is no separate self \u2014\nthis is what the sages of every age have proclaimed.',
+          'The closer you move toward soul, the more boundaries dissolve.\nThere is no separation between you and the world \u2014\nthis is the one truth sages of every age have spoken.',
         traditions: ['불교', '베단타', '현대 물리학'],
         traditions_en: ['Buddhism', 'Vedanta', 'Modern Physics'],
         theme: 'life_death',
@@ -1407,17 +1407,17 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Buddhism',
           },
         ],
-        reflection_ko: '내가 끝나는 곳과 세상이 시작하는 곳은 어디일까요?',
-        reflection_en: 'Where do you end and where does the world begin?',
+        reflection_ko: '나와 세상 사이의 경계가 사라진다면, 무엇이 남을까요?',
+        reflection_en: 'If the boundary between you and the world dissolves, what remains?',
       },
       {
         id: '4:12',
         chapter: 4,
         verse: 12,
         text_ko:
-          '이 순간에 새로 생겨나는 것은 없고, 사라지는 것도 없어요.\n그러므로 지금 이 순간은 절대적인 평화예요.',
+          '경계가 사라진 자리에는 평화가 있어요.\n새로 생겨나는 것도 없고, 사라지는 것도 없어요.\n지금 이 순간이, 이미 절대적인 평화예요.',
         text_en:
-          'Nothing truly arises in this moment, and nothing ceases.\nTherefore, this very moment is absolute peace.',
+          'Where boundaries dissolve, peace remains.\nNothing truly arises, and nothing truly ceases.\nThis very moment is already absolute peace.',
         traditions: ['선불교', '베단타'],
         traditions_en: ['Zen', 'Vedanta'],
         theme: 'life_death',
@@ -1433,9 +1433,9 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Buddhism',
           },
         ],
-        reflection_ko: '아무것도 오지 않고 가지 않는다면, 지금은 어떤 느낌인가요?',
+        reflection_ko: '아무것도 오지 않고 가지 않는다면, 지금 이 순간은 어떤 느낌인가요?',
         reflection_en:
-          'If nothing comes and nothing goes, what does this moment feel like?',
+          'If nothing comes and nothing goes, what does this very moment feel like?',
       },
     ],
   },
@@ -1449,18 +1449,18 @@ export const chapters: ScriptureChapter[] = [
     title_en: 'Stillness and Practice',
     theme: 'practice',
     intro_ko:
-      '수행은 특별한 게 아니에요.\n매일 조금씩, 자기 자신에게 돌아오는 거예요.',
+      '평화를 알았다면, 이제 그 안에 머무는 법을 배울 차례예요.\n수행은 거창한 것이 아니에요. 매 순간 자기 자신에게 돌아오는 거예요.',
     intro_en:
-      'Practice is nothing extraordinary.\nIt is returning to yourself, a little, every day.',
+      'If you have glimpsed peace, now it is time to learn to stay there.\nPractice is not grand. It is returning to yourself, moment by moment.',
     verses: [
       {
         id: '5:1',
         chapter: 5,
         verse: 1,
         text_ko:
-          '하루에 5분, 아무것도 하지 마세요.\n아무것도 하지 않는 것이 가장 깊은 일이에요.',
+          '하루에 5분만 아무것도 하지 않고 앉아 보세요.\n할 일을 멈추는 것, 그것이 가장 깊은 수행의 시작이에요.',
         text_en:
-          'Five minutes a day, do nothing.\nDoing nothing is the deepest work.',
+          'Sit for just five minutes a day and do nothing.\nTo stop doing is where the deepest practice begins.',
         traditions: ['선불교', '도교'],
         traditions_en: ['Zen', 'Taoism'],
         theme: 'practice',
@@ -1477,18 +1477,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Zen',
           },
         ],
-        reflection_ko: '오늘 5분, 아무것도 하지 않고 앉아 있을 수 있나요?',
+        reflection_ko: '오늘 5분, 아무것도 하지 않는 시간을 자신에게 줄 수 있나요?',
         reflection_en:
-          'Can you sit for five minutes today and simply do nothing?',
+          'Can you give yourself five minutes of pure stillness today?',
       },
       {
         id: '5:2',
         chapter: 5,
         verse: 2,
         text_ko:
-          '기도는 말하는 게 아니에요.\n기도는 듣는 거예요.',
+          '고요히 앉아 있으면 무언가가 들려오기 시작해요.\n기도는 말하는 것이 아니라, 듣는 것이에요.',
         text_en:
-          'Prayer is not speaking.\nPrayer is listening.',
+          'When you sit in stillness, something begins to speak.\nPrayer is not talking. It is listening.',
         traditions: ['기독교 신비주의', '수피즘'],
         traditions_en: ['Christian Mysticism', 'Sufism'],
         theme: 'practice',
@@ -1506,18 +1506,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Sufism',
           },
         ],
-        reflection_ko: '오늘 기도한다면, 말하지 않고 들어볼 수 있나요?',
+        reflection_ko: '말을 멈추고 귀를 기울이면, 무엇이 들리나요?',
         reflection_en:
-          'If you pray today, can you listen instead of speak?',
+          'If you stop speaking and truly listen, what do you hear?',
       },
       {
         id: '5:3',
         chapter: 5,
         verse: 3,
         text_ko:
-          '완벽한 수행은 없어요.\n넘어져도 다시 앉는 것, 그게 수행이에요.',
+          '들리지 않는 날도 있어요. 마음이 흩어지는 날도 있어요.\n그래도 다시 앉는 것, 그것이 수행이에요. 완벽할 필요는 없어요.',
         text_en:
-          'There is no perfect practice.\nFalling and sitting back down \u2014 that is the practice.',
+          'Some days you hear nothing. Some days the mind scatters.\nSitting down again anyway \u2014 that is the practice. It does not need to be perfect.',
         traditions: ['불교', '스토아'],
         traditions_en: ['Buddhism', 'Stoicism'],
         theme: 'practice',
@@ -1535,17 +1535,17 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Stoicism',
           },
         ],
-        reflection_ko: '오늘 넘어졌다면, 다시 앉을 수 있나요?',
-        reflection_en: 'If you fell today, can you simply sit back down?',
+        reflection_ko: '마음이 흩어진 날, 자신을 다그치지 않고 다시 시작할 수 있나요?',
+        reflection_en: 'On a scattered day, can you begin again without judging yourself?',
       },
       {
         id: '5:4',
         chapter: 5,
         verse: 4,
         text_ko:
-          '숨을 들이쉴 때, 세상을 받아들이세요.\n내쉴 때, 자신을 내려놓으세요.',
+          '다시 앉을 때, 호흡부터 시작해 보세요.\n들이쉴 때 세상을 받아들이고, 내쉴 때 나를 내려놓으세요.',
         text_en:
-          'Breathing in, receive the world.\nBreathing out, release yourself.',
+          'When you sit down again, start with breath.\nBreathe in and receive the world. Breathe out and release yourself.',
         traditions: ['불교', '힌두교'],
         traditions_en: ['Buddhism', 'Hinduism'],
         theme: 'practice',
@@ -1562,18 +1562,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Hinduism',
           },
         ],
-        reflection_ko: '지금 숨을 한 번 깊이 쉬어보세요. 무엇이 달라지나요?',
+        reflection_ko: '지금 이 자리에서 숨을 한 번 깊이 쉬어 보세요. 무엇이 달라지나요?',
         reflection_en:
-          'Take one deep breath right now. What changes?',
+          'Right where you are, take one deep breath. What shifts?',
       },
       {
         id: '5:5',
         chapter: 5,
         verse: 5,
         text_ko:
-          '설거지를 하면서도 수행할 수 있어요.\n신성한 순간은 특별한 장소에만 있지 않아요.',
+          '호흡은 앉아 있을 때만의 것이 아니에요.\n설거지를 하면서도, 길을 걸으면서도 숨을 느낄 수 있어요.\n수행은 특별한 장소에 있지 않아요.',
         text_en:
-          'You can practice while washing dishes.\nThe sacred is not confined to special places.',
+          'Breath is not only for sitting.\nYou can feel it while washing dishes, while walking down the street.\nPractice lives in no special place.',
         traditions: ['선불교', '이슬람'],
         traditions_en: ['Zen', 'Islam'],
         theme: 'practice',
@@ -1590,18 +1590,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Islam',
           },
         ],
-        reflection_ko: '오늘 가장 평범한 일을, 수행으로 바꿔볼 수 있을까요?',
+        reflection_ko: '오늘 가장 평범한 순간에 숨을 한 번 느껴볼 수 있나요?',
         reflection_en:
-          'Can you turn the most ordinary task today into a practice?',
+          'In the most ordinary moment today, can you pause and feel one breath?',
       },
       {
         id: '5:6',
         chapter: 5,
         verse: 6,
         text_ko:
-          '몸을 움직이세요. 몸은 마음의 집이에요.\n집을 돌보지 않으면, 안에 사는 이도 편하지 않아요.',
+          '일상의 수행은 몸에서 시작돼요.\n몸은 마음이 사는 집이에요. 집을 돌보지 않으면, 안에 있는 이도 편하지 않아요.',
         text_en:
-          'Move your body. The body is the home of the mind.\nNeglect the house, and the one within suffers.',
+          'Everyday practice begins with the body.\nThe body is the home where the mind lives. Neglect the house, and the one within suffers.',
         traditions: ['요가', '유교'],
         traditions_en: ['Yoga', 'Confucianism'],
         theme: 'practice',
@@ -1619,17 +1619,17 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Confucianism',
           },
         ],
-        reflection_ko: '오늘 내 몸에게 어떤 돌봄을 줄 수 있나요?',
-        reflection_en: 'How can you care for your body today?',
+        reflection_ko: '오늘 내 몸에게 작은 돌봄 하나를 선물할 수 있나요?',
+        reflection_en: 'What small act of care can you offer your body today?',
       },
       {
         id: '5:7',
         chapter: 5,
         verse: 7,
         text_ko:
-          '자연 속에 서 보세요.\n나무는 존재하는 법을 가르쳐주고, 바람은 놓아주는 법을 가르쳐줘요.',
+          '몸을 돌보았다면, 가끔은 밖으로 나가 보세요.\n나무는 그냥 서 있는 법을 가르쳐주고, 바람은 놓아주는 법을 보여줘요.',
         text_en:
-          'Stand in nature.\nTrees teach how to be; wind teaches how to let go.',
+          'Once you have cared for the body, step outside now and then.\nTrees teach how to simply stand; wind shows how to let go.',
         traditions: ['도교', '원주민 영성'],
         traditions_en: ['Taoism', 'Indigenous Spirituality'],
         theme: 'practice',
@@ -1647,17 +1647,17 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Indigenous Spirituality',
           },
         ],
-        reflection_ko: '마지막으로 자연 속에 멈춰 선 건 언제인가요?',
-        reflection_en: 'When did you last pause and stand in nature?',
+        reflection_ko: '마지막으로 하늘을 올려다보며 가만히 선 건 언제인가요?',
+        reflection_en: 'When did you last look up at the sky and simply stand still?',
       },
       {
         id: '5:8',
         chapter: 5,
         verse: 8,
         text_ko:
-          '수행에는 끝이 없어요.\n끝이 없다는 것이 아름다운 거예요.\n매일이 첫날이에요.',
+          '자연이 가르쳐주듯, 수행에는 끝이 없어요.\n끝이 없다는 것이 아름다운 거예요. 매일이 첫날이에요.',
         text_en:
-          'Practice has no end.\nThat it has no end is what makes it beautiful.\nEvery day is the first day.',
+          'As nature teaches, practice has no finish line.\nThat it never ends is what makes it beautiful. Every day is day one.',
         traditions: ['불교', '수피즘', '스토아'],
         traditions_en: ['Buddhism', 'Sufism', 'Stoicism'],
         theme: 'practice',
@@ -1675,18 +1675,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Stoicism',
           },
         ],
-        reflection_ko: '오늘이 수행의 첫날이라면, 무엇부터 시작하겠어요?',
+        reflection_ko: '오늘이 수행의 첫날이라면, 무엇부터 해보겠어요?',
         reflection_en:
-          'If today were the first day of your practice, where would you begin?',
+          'If today were the very first day of your practice, what would you do?',
       },
       {
         id: '5:9',
         chapter: 5,
         verse: 9,
         text_ko:
-          '간소화하고, 간소화하세요.\n진정한 풍요는 가진 것을 줄일 때 찾아와요.',
+          '매일이 첫날이라면, 많은 것이 필요하지 않아요.\n덜어내고, 또 덜어내세요. 진짜 풍요는 비울 때 찾아와요.',
         text_en:
-          'Simplify. Simplify.\nTrue abundance comes when you let go of excess.',
+          'If every day is the first day, you do not need much.\nLet go, and let go again. True richness arrives when you empty.',
         traditions: ['도교', '기독교 신비주의'],
         traditions_en: ['Taoism', 'Christian Mysticism'],
         theme: 'practice',
@@ -1704,17 +1704,17 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Transcendentalism',
           },
         ],
-        reflection_ko: '내 삶에서 덜어낼 수 있는 것은 무엇인가요?',
-        reflection_en: 'What can you subtract from your life?',
+        reflection_ko: '내 삶에서 하나만 덜어낸다면, 무엇을 놓겠어요?',
+        reflection_en: 'If you could let go of just one thing in your life, what would it be?',
       },
       {
         id: '5:10',
         chapter: 5,
         verse: 10,
         text_ko:
-          '예수도 대신 기도해주지 않았고, 석가도 대신 명상해주지 않았어요.\n길은 스스로 걸어야 해요.',
+          '비워낸 자리에 누군가가 대신 채워주지는 않아요.\n예수도 대신 기도해주지 않았고, 석가도 대신 명상해주지 않았어요.\n이 길은 스스로 걸어야 해요.',
         text_en:
-          'Jesus did not pray for his disciples in their place.\nBuddha did not meditate for them.\nYou must walk the path yourself.',
+          'No one can fill the space you have emptied for you.\nJesus did not pray in his disciples’ place. Buddha did not meditate for them.\nThis path, you must walk yourself.',
         traditions: ['기독교', '불교'],
         traditions_en: ['Christianity', 'Buddhism'],
         theme: 'practice',
@@ -1732,18 +1732,18 @@ export const chapters: ScriptureChapter[] = [
             tradition: 'Buddhism',
           },
         ],
-        reflection_ko: '내 수행은 누군가에게 맡길 수 없다는 것을 알고 있나요?',
+        reflection_ko: '내 수행을 대신해 줄 사람은 없다는 것을 받아들일 수 있나요?',
         reflection_en:
-          'Do you know that no one can walk your path for you?',
+          'Can you accept that no one else can do your practice for you?',
       },
       {
         id: '5:11',
         chapter: 5,
         verse: 11,
         text_ko:
-          '우리가 하는 모든 것이 수행이에요.\n접시를 닦는 것도, 길을 걷는 것도, 누군가의 말을 듣는 것도.',
+          '스스로 걷기 시작하면, 모든 것이 수행이 돼요.\n접시를 닦는 것도, 길을 걷는 것도, 누군가의 말에 귀 기울이는 것도.',
         text_en:
-          'Everything we do is practice.\nWashing a dish, walking a road, listening to another person.',
+          'Once you start walking on your own, everything becomes practice.\nWashing a dish, walking a road, truly listening to someone.',
         traditions: ['선불교', '기독교 신비주의'],
         traditions_en: ['Zen', 'Christian Mysticism'],
         theme: 'practice',
@@ -1762,18 +1762,18 @@ export const chapters: ScriptureChapter[] = [
           },
         ],
         reflection_ko:
-          '지금 하고 있는 이 행동을, 수행으로 바꿀 수 있을까요?',
+          '지금 이 순간 하고 있는 일을, 온 마음으로 할 수 있나요?',
         reflection_en:
-          'Can you turn what you are doing right now into practice?',
+          'Can you do what you are doing right now with your whole heart?',
       },
       {
         id: '5:12',
         chapter: 5,
         verse: 12,
         text_ko:
-          '싫어하는 것도, 좋아하는 것도 내려놓고 마음을 챙기는 것.\n그것이 수행의 삶이에요.',
+          '모든 것이 수행이라면, 마지막으로 남는 건 이거예요.\n싫어하는 것도, 좋아하는 것도 내려놓고 다만 깨어 있는 것.\n그것이 수행의 삶이에요.',
         text_en:
-          'Letting go of both aversion and attachment, and staying present.\nThat is the life of practice.',
+          'If everything is practice, then what remains is this:\nLet go of what you resist and what you cling to, and simply stay awake.\nThat is the life of practice.',
         traditions: ['불교', '스토아'],
         traditions_en: ['Buddhism', 'Stoicism'],
         theme: 'practice',
@@ -1791,9 +1791,9 @@ export const chapters: ScriptureChapter[] = [
           },
         ],
         reflection_ko:
-          '좋아하는 것에 대한 집착까지 내려놓을 수 있나요?',
+          '좋아하는 것에 대한 집착까지도, 내려놓을 준비가 되었나요?',
         reflection_en:
-          'Can you let go not only of what you dislike, but also of your attachment to what you like?',
+          'Are you ready to release even your attachment to the things you love?',
       },
     ],
   },
